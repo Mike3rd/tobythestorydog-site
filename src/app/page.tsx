@@ -7,13 +7,15 @@ import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center">
-      <Hero />
-      <AboutToby />
-      <NewsletterSignup />
-      <BonusDownloads />
-      <ContactForm />
-      <Footer />
-    </main>
+    <>
+      <Hero /> {/* Full-width hero */}
+      <main className="flex flex-col items-center w-full">
+        <AboutToby />
+        <NewsletterSignup />
+        <BonusDownloads />
+        <ContactForm />
+        <Footer />
+      </main>
+    </>
   );
 }

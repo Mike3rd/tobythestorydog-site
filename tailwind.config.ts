@@ -2,21 +2,25 @@ import { type Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/app/**/*.{ts,tsx}",
-    "./src/components/**/*.{ts,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: "var(--color-primary)",
-        secondary: "var(--color-secondary)",
-        accent: "var(--color-accent)",
-        background: "var(--color-background)",
-        text: "var(--color-text)",
+        primary: "#FFB347",         // Direct color values work better
+        secondary: "#FF7E6B",
+        accent: "#FFD56B",
+        background: "#FFF8F0",
+        text: "#333333",
+        buttons: "#FFB347",
       },
       fontFamily: {
-        fredoka: ["Fredoka One", "cursive"],
-        nunito: ["Nunito", "sans-serif"],
+          rubik: ["Rubik", "sans-serif"],
+           londrinashadow: ["Londrina Shadow", "sans-serif"],
+  fredoka: ["Fredoka One", "cursive"],
+  nunito: ["Nunito", "sans-serif"],
       },
     },
   },

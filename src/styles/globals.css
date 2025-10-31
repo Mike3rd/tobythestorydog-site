@@ -1,24 +1,29 @@
-:root {
-  /* Brand Colors */
-  --color-primary: #FFB347;         /* Warm Orange */
-  --color-secondary: #FF7E6B;       /* Soft Coral */
-  --color-accent: #FFD56B;          /* Sunny Yellow */
-  --color-background: #FFF8F0;      /* Light Cream */
-  --color-text: #333333;             /* Dark Gray */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-  /* Dependent / Component Variables */
-  --color-buttons: var(--color-primary);
-  --color-hero-bg: var(--color-primary);
-  --color-footer-bg: var(--color-secondary);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Base Styles */
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: 'Nunito', sans-serif;
-}
 
-button {
-  font-family: 'Fredoka One', cursive;
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --color-primary: #FFB347;
+    --color-secondary: #FF7E6B;
+    --color-accent: #FFD56B;
+    --color-background: #FFF8F0;
+    --color-text: #333333;
+  }
+
+  body {
+    background-color: theme('colors.background');
+    color: theme('colors.text');
+    font-family: 'Nunito', sans-serif;
+  }
+
+  button {
+    font-family: 'Fredoka One', cursive;
+  }
 }
