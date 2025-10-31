@@ -25,7 +25,7 @@ export default function Hero() {
 
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-fredoka mb-4 text-white leading-tight">
-          Toby Adopts a Hooman 🐾
+          Toby Adopts a Hoomands 🐾
         </h1>
 
         {/* Subtitle */}
