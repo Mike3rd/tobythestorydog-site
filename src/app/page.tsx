@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import AboutToby from "@/components/AboutToby";
 import TobyChat from "@/components/TobyChat";
-import Reviews from "@/components/Reviews";
+import PawtasticReviews from "@/components/PawtasticReviews";
 import BonusDownloads from "@/components/BonusDownloads";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -13,9 +13,9 @@ export default function HomePage() {
       <main className="flex flex-col items-center w-full">
         <AboutToby />
  <TobyChat />
-        <Reviews />
+        <PawtasticReviews />
         
-         <BonusDownloads />
+          <BonusDownloads fileUrl="/extras/test.pdf" />
          <ContactForm />
         <Footer />
       </main>
