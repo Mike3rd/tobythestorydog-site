@@ -9,18 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#FFB347",         // Direct color values work better
-        secondary: "#FF7E6B",
-        accent: "#FFD56B",
-        background: "#FFF8F0",
-        text: "#333333",
-        buttons: "#FFB347",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        background: "var(--color-background)",
+        text: "var(--color-text)",
+        text_hero_title: "var(--color-hero-title)",
+        text_hero_subtitle: "var(--color-hero-subtitle)",
+        buttons: "var(--color-buttons)",
+        color_facebook: "var(--color-facebook)",
+        color_instagram: "var(--color-instagram)",
       },
       fontFamily: {
-          rubik: ["Rubik", "sans-serif"],
-           londrinashadow: ["Londrina Shadow", "sans-serif"],
-  fredoka: ["Fredoka One", "cursive"],
-  nunito: ["Nunito", "sans-serif"],
+        barriecito: ['"Barriecito"', "sans-serif"],
+        rubik: ['"Rubik"', "sans-serif"],
+        fredoka: ["Fredoka One", "cursive"],
+        nunito: ["Nunito", "sans-serif"],
+        luckiestguy: ['"Luckiest Guy"', "cursive"],
       },
     },
   },
