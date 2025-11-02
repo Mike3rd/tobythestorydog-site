@@ -64,7 +64,7 @@ export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
         Get a fun coloring page featuring Toby! Enter your email below to download and stay updated with occasional Toby news.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4 text-left">
+      <form onSubmit={handleSubmit} className="space-y-4 text-left max-w-md mx-auto">
         <input
           type="text"
           placeholder="Name (optional)"

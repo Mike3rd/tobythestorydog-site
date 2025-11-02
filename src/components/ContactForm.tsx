@@ -76,7 +76,7 @@ export default function ContactNewsletterForm() {
   };
 
   return (
-    <section className="max-w-3xl text-center py-16 px-4 mx-auto">
+    <section id="contact" className="max-w-3xl text-center py-16 px-4 mx-auto">
       <h2 className="text-3xl font-fredoka text-orange-600 mb-4">
         Contact & Newsletter Signup
       </h2>
@@ -84,7 +84,7 @@ export default function ContactNewsletterForm() {
         Have a question or want occasional updates? Fill out the form below and stay in touch with Toby!
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4 text-left">
+      <form onSubmit={handleSubmit} className="space-y-4 text-left max-w-md mx-auto">
         {/* Honeypot field */}
         <input type="text" name="hp_field" autoComplete="off" style={{ display: "none" }} />
 

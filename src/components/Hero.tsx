@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import PawPrints from "./PawPrints";
 import Lightbox from "./Lightbox";
+import { FaPaw } from "react-icons/fa";
 
 
 export default function Hero() {
@@ -23,21 +24,55 @@ export default function Hero() {
         />
       </div>
 
-      {/* Headline */}
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-luckiestguy mb-3 text-text_hero_title leading-tight z-10">
-        Toby Adopts a Hooman
-      </h1>
+ {/* Headline */}
+<h1 className="text-5xl sm:text-6xl md:text-7xl font-luckiestguy mb-3 text-text_hero_title leading-tight z-10 text-center md:text-left">
+  Toby Adopts a Hooman
+</h1>
 
-      {/* Subheadline */}
-      <p className="text-text_hero_subtitle text-base font-rubik sm:text-lg md:text-xl mb-6 max-w-2xl mx-auto px-4 z-10">
-        <b>The bedtime story made for dogs (and their hoomans too!) — a wag-worthy adventure the whole family will love.</b> <br />
-        Follow Toby’s journey from stray to family — a perfect holiday gift for the dog (or human!) who has everything.
-      </p>
+{/* Right: Text Content */}
+<div className="md:w-1/2 text-center md:text-left space-y-4 px-4 sm:px-6 md:px-8">
+  {/* Subheading */}
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-fredoka text-orange-600 leading-snug">
+    A heartwarming story for kids — and the dogs who love them.
+  </h2>
 
-      {/* Holiday Offer */}
-      <div className="text-text_hero_title font-fredoka text-lg sm:text-xl mb-6 z-10">
-        🎁 <strong>Holiday Special:</strong> Paperback just <span className="text-text_hero_title font-bold">$11.99</span> <span className="line-through opacity-70 text-text_hero_subtitle">$14.99</span>
-      </div>
+  <p className="text-lg text-gray-700 leading-relaxed mt-4">
+    Read <span className="font-semibold text-orange-600 italic">Toby the Story Dog</span> together and discover a tail-wagging adventure 
+    full of humor, hidden surprises, and gentle lessons about kindness, courage, 
+    and adoption. The perfect holiday gift for the dog (or human!) who has everything.
+  </p>
+
+  {/* Feature Highlights */}
+<ul className="text-gray-800 text-base mt-6 space-y-2 font-semibold text-left">
+  <li className="flex items-start justify-start">
+    <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
+    Interactive fun: “Give your dog a treat!” and “High-five your pup!”
+  </li>
+
+  <li className="flex items-start justify-start">
+    <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
+    Hidden bones to find on every page  — random “Easter eggs” for adults.
+  </li>
+
+  <li className="flex items-start justify-start">
+    <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
+    Perfect bedtime story for kids and furry friends
+  </li>
+
+  <li className="flex items-start justify-start">
+    <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
+    A feel-good gift that celebrates love and rescue
+  </li>
+</ul>
+
+</div>
+
+{/* Holiday Offer */}
+<div className="text-text_hero_title font-fredoka text-lg sm:text-xl mt-4 mb-6 z-10 text-center md:text-left">
+  🎁 <strong>Holiday Special:</strong> Paperback just{" "}
+  <span className="text-text_hero_title font-bold">$11.99</span>{" "}
+  <span className="line-through opacity-70 text-text_hero_subtitle">$14.99</span>
+</div>
 
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 z-10">
