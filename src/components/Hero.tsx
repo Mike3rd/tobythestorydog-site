@@ -77,7 +77,7 @@ export default function Hero() {
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 z-10">
         <a
-          href="#get-the-book"
+          href="https://www.amazon.com/dp/B0FYTD9T81"
           className="px-8 py-4 bg-buttons text-text_hero_subtitle rounded-full font-fredoka text-lg sm:text-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:brightness-110 active:scale-95"
         >
           Buy on Amazon
