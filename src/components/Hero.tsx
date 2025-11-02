@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Book Cover */}
       <div className="mb-8 w-full max-w-xs sm:max-w-sm md:max-w-md z-10">
         <Image
-          src="/book-cover2.webp"
+          src="/book-cover.webp"
           alt="Toby Adopts a Hooman"
           width={360}
           height={360}
