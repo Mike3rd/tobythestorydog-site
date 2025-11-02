@@ -15,7 +15,7 @@ export default function AboutToby() {
 
   {/* Condensed traits paragraph */}
   <p className="text-gray-700 leading-relaxed mb-6">
-    Toby loves chasing squirrels 🐿️ • Peanut butter biscuits are his favorite 🥜🍪 • He enjoys storytelling and giving paw-fives ✋🐾 • And sometimes he imagines himself as a superhero dog 🦸‍♂️🐶
+    🐿️ Toby loves chasing squirrels • Peanut butter biscuits are his favorite • He enjoys storytelling and giving paw-fives • And sometimes he imagines himself as a superhero dog 🐶
   </p>
 
 
