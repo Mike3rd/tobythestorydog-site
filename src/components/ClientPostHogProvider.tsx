@@ -6,7 +6,7 @@ export default function ClientPostHogProvider() {
   useEffect(() => {
     import("posthog-js").then((mod) => {
       const posthog = mod.default || mod;
-      posthog.init("YOUR_PROJECT_API_KEY", {
+      posthog.init("phc_6FM4koZdRMY7VlPfcoqHAf1AsfCSEFLnx6hieBjlD8O", {
         api_host: "https://app.posthog.com",
         capture_pageview: true,
       });
