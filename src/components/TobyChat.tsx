@@ -17,11 +17,23 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
   const [loading, setLoading] = useState(false);
   const chatBoxRef = useRef<HTMLDivElement>(null);
 
-  // Load previous messages from localStorage
+  // Load previous messages from localStorage OR show welcome message
   useEffect(() => {
     const chatHistory: Message[] = JSON.parse(localStorage.getItem("tobyChat") || "[]");
-    setMessages(chatHistory);
+    
+    if (chatHistory.length === 0) {
+      // Show welcome message if no chat history exists
+      const welcomeMessage: Message = {
+        content: "🐕 Woof! I'm Toby the Story Dog! I'm a brave Chihuahua with white, black, and brown markings. Ask me about my adventures, what I look like, or my favorite human Mike! What would you like to know?",
+        isUser: false
+      };
+      setMessages([welcomeMessage]);
+    } else {
+      setMessages(chatHistory);
+    }
   }, []);
+
+  
 
   // Auto-scroll to bottom when messages update
   useEffect(() => {
@@ -102,7 +114,31 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
             {msg.content}
           </div>
         ))}
-        {loading && <div className="italic text-gray-400">Toby is thinking<span className="animate-pulse">...</span></div>}
+  {/* Input -paw animation
+{loading && (
+  <div className="flex items-center space-x-2 text-gray-500 italic">
+    <div className="flex space-x-1">
+      <span className="animate-bounce">🐾</span>
+      <span className="animate-bounce" style={{ animationDelay: '200ms' }}>🐾</span>
+      <span className="animate-bounce" style={{ animationDelay: '400ms' }}>🐾</span>
+    </div>
+    <span>Toby is paw-typing...</span>
+  </div>
+)}
+   */}
+
+   {loading && (
+  <div className="flex items-center space-x-2 text-gray-500 italic">
+    <div className="flex space-x-1">
+      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+    </div>
+    <span>Toby is typing...</span>
+    <span className="text-lg">🐾</span>
+  </div>
+)}
+
       </div>
 
       {/* Input */}
