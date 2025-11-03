@@ -12,11 +12,11 @@ export default function HomePage() {
       <Hero /> {/* Full-width hero */}
       <main className="flex flex-col items-center w-full">
         <AboutToby />
- <TobyChat />
+        <TobyChat />
         <PawtasticReviews />
-        
-          <BonusDownloads fileUrl="/extras/test.pdf" />
-         <ContactForm />
+
+        <BonusDownloads fileUrl="/extras/test.pdf" />
+        <ContactForm />
         <Footer />
       </main>
     </>
