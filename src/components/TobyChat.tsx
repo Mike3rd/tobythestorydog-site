@@ -44,7 +44,7 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
     if (!msg) return;
 
     if (msg.length > 200) {
-      appendMessage("🚨 Message too long (max 200 chars)", false);
+      appendMessage("🐾 Woof! That's too many words for this pup! (max 200 chars)", false);
       setInput("");
       return;
     }
@@ -81,9 +81,9 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
 
   return (
     <div className="max-w-md mx-auto p-4 bg-background border rounded-lg shadow-lg">
-      {/* Pawprint header / title */}
+      {/* Dog header / title */}
       <div className="flex items-center mb-2 space-x-2">
-        <span className="text-2xl">🐾</span>
+        <span className="text-2xl">🐕</span>
         <h2 className="text-xl font-luckiestguy text-text_hero_title">Chat with Toby</h2>
       </div>
 
@@ -102,7 +102,7 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
             {msg.content}
           </div>
         ))}
-        {loading && <div className="italic text-gray-400">Toby is typing<span className="animate-pulse">...</span></div>}
+        {loading && <div className="italic text-gray-400">Toby is thinking<span className="animate-pulse">...</span></div>}
       </div>
 
       {/* Input */}
