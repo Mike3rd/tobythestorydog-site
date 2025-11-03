@@ -1,9 +1,7 @@
-"use client";
-
 import type { Metadata } from "next";
-import { useEffect } from "react";
 import "@/styles/globals.css";
 import { fredoka, nunito, barriecito, rubik, luckiestguy } from "@/lib/fonts";
+import ClientPostHogProvider from "@/components/ClientPostHogProvider"; // new file
 
 export const metadata: Metadata = {
   title: "Toby the Story Dog – Pet Gifts, Fun PDFs & Adventures",
@@ -50,26 +48,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    // ✅ Dynamic import with proper type hint
-    import("posthog-js").then((mod) => {
-      const posthog = mod.default || mod; // Works with both ESM and CJS builds
-      if (!posthog.has_opted_out_capturing()) {
-        posthog.init("phc_6FM4koZdRMY7VlPfcoqHAf1AsfCSEFLnx6hieBjlD8O", {
-          api_host: "https://app.posthog.com",
-          capture_pageview: true,
-        });
-        console.log("✅ PostHog initialized");
-      }
-    });
-  }, []);
-
   return (
     <html
       lang="en"
       className={`${fredoka.variable} ${nunito.variable} ${barriecito.variable} ${rubik.variable} ${luckiestguy.variable}`}
     >
-      <body className="bg-cream text-gray-800 font-nunito">{children}</body>
+      <body className="bg-cream text-gray-800 font-nunito">
+        <ClientPostHogProvider />
+        {children}
+      </body>
     </html>
   );
 }
