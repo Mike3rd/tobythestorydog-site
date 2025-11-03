@@ -41,6 +41,19 @@ export const metadata: Metadata = {
       "Meet Toby the Story Dog! Explore his stories, download fun bonuses, and find perfect gifts for pet lovers.",
     images: ["https://www.tobythestorydog.com/og-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: "Toby the Story Dog",
+  },
 };
 
 export default function RootLayout({
