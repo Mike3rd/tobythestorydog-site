@@ -11,7 +11,9 @@ interface TobyChatProps {
   apiEndpoint?: string; // default endpoint
 }
 
-export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.com/chat" }: TobyChatProps) {
+export default function TobyChat({
+  apiEndpoint = "https://mturko.pythonanywhere.com/chat",
+}: TobyChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -19,21 +21,22 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
 
   // Load previous messages from localStorage OR show welcome message
   useEffect(() => {
-    const chatHistory: Message[] = JSON.parse(localStorage.getItem("tobyChat") || "[]");
-    
+    const chatHistory: Message[] = JSON.parse(
+      localStorage.getItem("tobyChat") || "[]"
+    );
+
     if (chatHistory.length === 0) {
       // Show welcome message if no chat history exists
       const welcomeMessage: Message = {
-        content: "🐕 Woof! I'm Toby the Story Dog! I'm a brave Chihuahua with white, black, and brown markings. Ask me about my adventures, what I look like, or my favorite human Mike! What would you like to know?",
-        isUser: false
+        content:
+          "🐕 Woof! I'm Toby the Story Dog! I'm a brave Chihuahua with white, black, and brown markings. Ask me about my adventures, what I look like, or my favorite hoomans Elayne & Mike! What would you like to know?",
+        isUser: false,
       };
       setMessages([welcomeMessage]);
     } else {
       setMessages(chatHistory);
     }
   }, []);
-
-  
 
   // Auto-scroll to bottom when messages update
   useEffect(() => {
@@ -44,7 +47,7 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
 
   const appendMessage = (content: string, isUser: boolean) => {
     const newMsg: Message = { content, isUser };
-    setMessages(prev => {
+    setMessages((prev) => {
       const updated = [...prev, newMsg];
       localStorage.setItem("tobyChat", JSON.stringify(updated));
       return updated;
@@ -56,7 +59,10 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
     if (!msg) return;
 
     if (msg.length > 200) {
-      appendMessage("🐾 Woof! That's too many words for this pup! (max 200 chars)", false);
+      appendMessage(
+        "🐾 Woof! That's too many words for this pup! (max 200 chars)",
+        false
+      );
       setInput("");
       return;
     }
@@ -77,7 +83,8 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
       const data: { response: string } = await response.json();
       appendMessage(data.response, false);
     } catch (error: unknown) {
-      const errorMsg = error instanceof Error ? error.message : "Error sending message";
+      const errorMsg =
+        error instanceof Error ? error.message : "Error sending message";
       appendMessage(errorMsg, false);
     } finally {
       setLoading(false);
@@ -96,7 +103,9 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
       {/* Dog header / title */}
       <div className="flex items-center mb-2 space-x-2">
         <span className="text-2xl">🐕</span>
-        <h2 className="text-xl font-luckiestguy text-text_hero_title">Chat with Toby</h2>
+        <h2 className="text-xl font-luckiestguy text-text_hero_title">
+          Chat with Toby
+        </h2>
       </div>
 
       {/* Chat box */}
@@ -108,13 +117,15 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
           <div
             key={i}
             className={`p-2 rounded-lg max-w-[80%] ${
-              msg.isUser ? "bg-primary text-white self-end ml-auto" : "bg-gray-200 text-gray-800"
+              msg.isUser
+                ? "bg-primary text-white self-end ml-auto"
+                : "bg-gray-200 text-gray-800"
             }`}
           >
             {msg.content}
           </div>
         ))}
-  {/* Input -paw animation
+        {/* Input -paw animation
 {loading && (
   <div className="flex items-center space-x-2 text-gray-500 italic">
     <div className="flex space-x-1">
@@ -127,18 +138,26 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
 )}
    */}
 
-   {loading && (
-  <div className="flex items-center space-x-2 text-gray-500 italic">
-    <div className="flex space-x-1">
-      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-    </div>
-    <span>Toby is typing...</span>
-    <span className="text-lg">🐾</span>
-  </div>
-)}
-
+        {loading && (
+          <div className="flex items-center space-x-2 text-gray-500 italic">
+            <div className="flex space-x-1">
+              <div
+                className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                style={{ animationDelay: "0ms" }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                style={{ animationDelay: "150ms" }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                style={{ animationDelay: "300ms" }}
+              ></div>
+            </div>
+            <span>Toby is typing...</span>
+            <span className="text-lg">🐾</span>
+          </div>
+        )}
       </div>
 
       {/* Input */}
@@ -146,7 +165,7 @@ export default function TobyChat({ apiEndpoint = "https://mturko.pythonanywhere.
         <input
           type="text"
           value={input}
-          onChange={e => setInput(e.target.value)}
+          onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder="Chat with Toby..."
           className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
