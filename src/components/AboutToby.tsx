@@ -11,13 +11,6 @@ export default function AboutToby() {
         and small.
       </p>
 
-      {/* Optional inspirational paragraph */}
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Through his heartwarming stories, Toby reminds us about kindness,
-        friendship, and the joy of little moments. Join him as he explores the
-        world, one pawstep at a time!
-      </p>
-
       {/* Condensed traits paragraph */}
       <p className="text-gray-700 leading-relaxed mb-6">
         Toby loves the beach and sleeping • Chicken and cabbage are his
