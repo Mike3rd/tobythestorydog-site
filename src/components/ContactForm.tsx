@@ -1,7 +1,7 @@
 "use client";
-
+import { trackEvent } from "@/lib/track";
 import { useState } from "react";
-import { supabase } from "@/lib/supabase"; // ✅ updated import
+import { supabase } from "@/lib/supabase";
 
 export default function ContactNewsletterForm() {
   const [name, setName] = useState("");
@@ -30,12 +30,25 @@ export default function ContactNewsletterForm() {
     if (!email) {
       setErrorMsg("Email is required");
       setStatus("error");
+
+      // Track validation error
+      trackEvent("contact_form_validation_error", {
+        field: "email",
+        error: "required",
+      });
+
       return;
     }
 
     if (!validateEmail(email)) {
       setErrorMsg("Please enter a valid email address");
       setStatus("error");
+
+      // Track validation error
+      trackEvent("contact_form_validation_error", {
+        field: "email",
+        error: "invalid",
+      });
       return;
     }
 
@@ -53,12 +66,23 @@ export default function ContactNewsletterForm() {
     if (error) {
       setStatus("error");
       setErrorMsg(error.message);
+      trackEvent("contact_form_submission_error", {
+        error: error.message,
+        newsletter_opt_in: subscribe,
+      });
     } else {
       setStatus("success");
       setName("");
       setEmail("");
       setMessage("");
       setSubscribe(false);
+
+      // ✅ Track successful submission
+      trackEvent("contact_form_submitted", {
+        newsletter_opt_in: subscribe,
+        message_length: message.length,
+        name_provided: !!name,
+      });
     }
   };
 

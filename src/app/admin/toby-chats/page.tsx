@@ -21,6 +21,8 @@ export default function TobyChatsAdmin() {
         .from("toby_chats")
         .select("*")
         .order("created_at", { ascending: false });
+      console.log("Supabase error:", error);
+      console.log("Supabase data:", data);
       if (!error && data) setChats(data);
     }
     loadChats();
