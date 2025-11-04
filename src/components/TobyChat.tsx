@@ -102,7 +102,7 @@ export default function TobyChat({
     <div className="max-w-md mx-auto p-4 bg-background border rounded-lg shadow-lg">
       {/* Dog header / title */}
       <div className="flex items-center mb-2 space-x-2">
-        <span className="text-2xl">🐕</span>
+        <span className="text-2xl">🗪</span>
         <h2 className="text-xl font-luckiestguy text-text_hero_title">
           Chat with Toby
         </h2>
