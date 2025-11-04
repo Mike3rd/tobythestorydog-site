@@ -20,8 +20,9 @@ export default function AboutToby() {
 
       {/* Condensed traits paragraph */}
       <p className="text-gray-700 leading-relaxed mb-6">
-        Toby loves the beach • Chicken and cabbage are his favorites • He enjoys
-        scavenger hunts and sleeping • Sometimes he acts like a cat 🐈
+        Toby loves the beach and sleeping • Chicken and cabbage are his
+        favorites • He enjoys playing scavenger hunt for treats every night •
+        Sometimes he acts like a cat 🐈
       </p>
 
       {/* Chat callout box at the end, before chatbox */}
