@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef, KeyboardEvent } from "react";
 import { SlSpeech } from "react-icons/sl";
-import { trackEvent } from "@/lib/track"; // 👈 add this at top
+import { trackEvent } from "@/lib/track";
+import { supabase } from "@/lib/supabase";
 
 interface Message {
   content: string;
@@ -84,6 +85,24 @@ export default function TobyChat({
 
       const data: { response: string } = await response.json();
       appendMessage(data.response, false);
+
+      // 👇 Save both question + answer to Supabase
+      await supabase.from("toby_chats").insert([
+        {
+          message: msg,
+          reply: data.response,
+          user_agent:
+            typeof navigator !== "undefined" ? navigator.userAgent : null,
+        },
+      ]);
+
+      // 👇 Randomly track ~20% of chats in PostHog to avoid noise
+      if (Math.random() < 0.2) {
+        trackEvent("chat_message_sampled", {
+          message_length: msg.length,
+          location: "chat_box",
+        });
+      }
     } catch (error: unknown) {
       const errorMsg =
         error instanceof Error ? error.message : "Error sending message";
@@ -182,12 +201,6 @@ export default function TobyChat({
 
             // Fire your existing message logic
             sendMessage();
-
-            // 👇 Track PostHog event
-            trackEvent("chat_message_sent", {
-              message_length: input.length,
-              location: "chat_box",
-            });
           }}
           className="px-4 py-2 bg-buttons text-white rounded-lg font-fredoka hover:brightness-110 transition"
         >
