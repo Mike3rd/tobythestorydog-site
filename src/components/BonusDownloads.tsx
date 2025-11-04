@@ -9,7 +9,7 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey);
 
 interface BonusDownloadProps {
-  fileUrl: string; // e.g., "/extras/#.pdf"
+  fileUrl: string; // e.g., "/extras/pdfnamehere.pdf"
 }
 
 export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
