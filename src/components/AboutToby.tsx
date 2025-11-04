@@ -19,10 +19,12 @@ export default function AboutToby() {
       </p>
 
       {/* Chat callout box at the end, before chatbox */}
-      <div className="bg-accent border border-gray-300 rounded-lg p-6 mb-4 text-gray-800 shadow-sm">
+      <div className="bg-accent border border-gray-300 rounded-lg p-6 mb-4 text-gray-800 shadow-sm text-lg">
         🐶 <strong>Chat with Toby!</strong> Ask him fun questions like{" "}
-        <em>“What’s your favorite treat?”</em> or{" "}
-        <em>“Can you tell me a silly dog story?”</em> and see his playful
+        <em>
+          “What’s your favorite treat?”, “Can you tell me a silly dog story?”
+        </em>{" "}
+        or <em>“Can you tell me a silly dog story?”</em> and see his playful
         answers.
       </div>
     </section>

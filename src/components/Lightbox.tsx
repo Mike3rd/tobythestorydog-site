@@ -1,4 +1,3 @@
-// src/components/Lightbox.tsx
 "use client";
 
 import { useState } from "react";
@@ -10,16 +9,29 @@ interface LightboxProps {
   imageSrc: string;
   alt: string;
   triggerLabel?: string; // optional button label
+  onOpen?: () => void; // callback for PostHog
 }
 
-export default function Lightbox({ imageSrc, alt, triggerLabel }: LightboxProps) {
+export default function Lightbox({
+  imageSrc,
+  alt,
+  triggerLabel,
+  onOpen,
+}: LightboxProps) {
+  // ✅ Add isOpen state
   const [isOpen, setIsOpen] = useState(false);
+
+  // ✅ Handler to open the lightbox
+  const handleOpen = () => {
+    setIsOpen(true);
+    if (onOpen) onOpen(); // fire PostHog event
+  };
 
   return (
     <>
-      {/* Trigger button - outline style */}
+      {/* Trigger button */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={handleOpen} // ✅ only one onClick
         className="px-6 py-3 border-2 border-buttons text-buttons rounded-full font-fredoka text-lg sm:text-xl hover:bg-buttons hover:text-white transition"
         aria-label="Open lightbox"
       >
