@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { createBrowserClient } from "@supabase/ssr";
+import { trackEvent } from "@/lib/track";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
@@ -37,6 +38,13 @@ export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
       return;
     }
 
+    // ✅ Track the form submit (before Supabase call)
+    trackEvent("download_form_submitted", {
+      emailEntered: true,
+      newsletterOptIn: subscribe,
+      file: fileUrl,
+    });
+
     setStatus("loading");
     setErrorMsg("");
 
@@ -51,11 +59,17 @@ export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
     if (error) {
       setStatus("error");
       setErrorMsg(error.message);
+
+      // ✅ Track error
+      trackEvent("download_form_error", { message: error.message });
     } else {
       setStatus("success");
       setName("");
       setEmail("");
       setSubscribe(false);
+
+      // ✅ Track success (user ready to download)
+      trackEvent("download_form_success", { file: fileUrl });
     }
   };
 
@@ -143,6 +157,9 @@ export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
             <a
               href={fileUrl}
               target="_blank"
+              onClick={() =>
+                trackEvent("download_button_clicked", { file: fileUrl })
+              } // ✅ Track the actual download click
               className="px-6 py-3 bg-buttons text-text_hero_subtitle rounded-full font-fredoka text-lg sm:text-xl shadow-md hover:scale-105 hover:brightness-110 transition-transform duration-300"
             >
               Download Coloring Page
