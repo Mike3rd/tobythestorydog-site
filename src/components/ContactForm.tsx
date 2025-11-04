@@ -1,11 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { createBrowserClient } from "@supabase/ssr";
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey);
+import { supabase } from "@/lib/supabase"; // ✅ updated import
 
 export default function ContactNewsletterForm() {
   const [name, setName] = useState("");
