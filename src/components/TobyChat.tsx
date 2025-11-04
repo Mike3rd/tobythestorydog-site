@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, KeyboardEvent } from "react";
 import { SlSpeech } from "react-icons/sl";
+import { trackEvent } from "@/lib/track"; // 👈 add this at top
 
 interface Message {
   content: string;
@@ -173,8 +174,21 @@ export default function TobyChat({
           placeholder="Chat with Toby..."
           className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
         />
+
         <button
-          onClick={sendMessage}
+          onClick={() => {
+            // Only send if input not empty
+            if (!input.trim()) return;
+
+            // Fire your existing message logic
+            sendMessage();
+
+            // 👇 Track PostHog event
+            trackEvent("chat_message_sent", {
+              message_length: input.length,
+              location: "chat_box",
+            });
+          }}
           className="px-4 py-2 bg-buttons text-white rounded-lg font-fredoka hover:brightness-110 transition"
         >
           Send
