@@ -31,7 +31,7 @@ export default function Hero() {
           />
 
           {/* Amazon Badge */}
-          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#FF9900] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md group-hover:brightness-110 transition">
+          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-orange text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md group-hover:brightness-110 transition">
             Available on Amazon
           </span>
         </a>
@@ -52,7 +52,7 @@ export default function Hero() {
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
           Read{" "}
           <span className="font-semibold text-orange italic">
-            Toby the Story Dog
+            Toby Adopts a Hooman
           </span>{" "}
           together and discover a tail-wagging adventure full of humor, hidden
           surprises, and gentle lessons about kindness, courage, and adoption.
