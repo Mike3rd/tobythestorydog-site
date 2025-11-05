@@ -6,9 +6,9 @@ export default function AboutToby() {
       </h2>
 
       <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-        Toby is a lovable rescue pup who thinks he adopted his hooman! 🐾 Full
-        of curiosity, mischief, and endless tail wags, he loves adventures big
-        and small.
+        Toby is a stubborn but lovable rescue pup who thinks he adopted his
+        hooman! 🐾 Full of curiosity, mischief, and endless tail wags, he loves
+        adventures big and small.
       </p>
 
       {/* Condensed traits paragraph */}

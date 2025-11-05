@@ -14,14 +14,21 @@ export default function Hero() {
 
       {/* Book Cover */}
       <div className="mb-8 w-full max-w-xs sm:max-w-sm md:max-w-md z-10">
-        <Image
-          src="/book-cover.webp"
-          alt="Toby Adopts a Hooman"
-          width={360}
-          height={360}
-          className="rounded-lg shadow-2xl mx-auto"
-          loading="eager"
-        />
+        <a
+          href="https://www.amazon.com/dp/B0FYTD9T81"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Buy Toby the Story Dog on Amazon"
+        >
+          <Image
+            src="/book-cover.webp"
+            alt="Toby Adopts a Hooman"
+            width={360}
+            height={360}
+            className="rounded-lg shadow-2xl mx-auto"
+            loading="eager"
+          />
+        </a>
       </div>
 
       {/* Headline */}
