@@ -13,6 +13,7 @@ const config: Config = {
         secondary: "var(--color-secondary)",
         accent: "var(--color-accent)",
         background: "var(--color-background)",
+        orange: "var(--color-orange)",
         text: "var(--color-text)",
         text_hero_title: "var(--color-hero-title)",
         text_hero_subtitle: "var(--color-hero-subtitle)",

@@ -19,9 +19,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between space-y-8 md:space-y-0">
         {/* About Toby */}
         <div className="md:w-1/3 text-center md:text-left">
-          <h3 className="text-xl font-fredoka text-orange-600 mb-2">
-            About Toby
-          </h3>
+          <h3 className="text-xl font-fredoka text-orange mb-2">About Toby</h3>
           <p className="text-gray-700 leading-relaxed">
             Toby is a rescue pup who thinks he adopted his human! Follow his
             adventures and stay wagging with updates. 🐾
@@ -33,15 +31,13 @@ export default function Footer() {
 
         {/* Social */}
         <div className="md:w-1/3 text-center">
-          <h3 className="text-xl font-fredoka text-orange-600 mb-2">
-            Follow Toby
-          </h3>
+          <h3 className="text-xl font-fredoka text-orange mb-2">Follow Toby</h3>
           <div className="flex justify-center space-x-4">
             <a
               href="https://facebook.com/TobyTheStoryDog"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-color_facebook hover:text-orange-600 transition text-2xl"
+              className="text-color_facebook hover:text-orange transition text-2xl"
               aria-label="Toby on Facebook"
             >
               <FaFacebookF />
@@ -50,7 +46,7 @@ export default function Footer() {
               href="https://instagram.com/TobyTheStoryDog"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-color_instagram hover:text-orange-600 transition text-2xl"
+              className="text-color_instagram hover:text-orange transition text-2xl"
               aria-label="Toby on Instagram"
             >
               <FaInstagram />
@@ -60,11 +56,11 @@ export default function Footer() {
           <div className="mt-8">
             <button
               onClick={scrollToTop}
-              className="group flex items-center justify-center mx-auto text-gray-600 hover:text-orange-600 transition-transform duration-500"
+              className="group flex items-center justify-center mx-auto text-gray-600 hover:text-orange transition-transform duration-500"
               aria-label="Back to top"
             >
               <FaPaw className="text-2xl mr-2 motion-safe:animate-[bounce_2s_ease-in-out_infinite] group-hover:scale-125 transition-transform duration-300" />
-              <span className="underline text-sm font-fredoka group-hover:text-orange-600 transition-colors duration-300">
+              <span className="underline text-sm font-fredoka group-hover:text-orange transition-colors duration-300">
                 Back to Top
               </span>
             </button>
@@ -76,7 +72,7 @@ export default function Footer() {
 
         {/* Newsletter Button */}
         <div className="md:w-1/3 text-center md:text-right">
-          <h3 className="text-xl font-fredoka text-orange-600 mb-2">
+          <h3 className="text-xl font-fredoka text-orange mb-2">
             Stay Updated
           </h3>
           <p className="text-gray-700 mb-2">

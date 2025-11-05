@@ -13,21 +13,27 @@ export default function Hero() {
       <PawPrints />
 
       {/* Book Cover */}
-      <div className="mb-8 w-full max-w-xs sm:max-w-sm md:max-w-md z-10">
+      <div className="relative mb-8 w-full max-w-xs sm:max-w-sm md:max-w-md z-10 group">
         <a
           href="https://www.amazon.com/dp/B0FYTD9T81"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Buy Toby the Story Dog on Amazon"
+          className="block relative"
         >
           <Image
             src="/book-cover.webp"
-            alt="Toby Adopts a Hooman"
+            alt="Toby the Story Dog book cover"
             width={360}
             height={360}
-            className="rounded-lg shadow-2xl mx-auto"
+            className="rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
             loading="eager"
           />
+
+          {/* Amazon Badge */}
+          <span className="absolute bottom-3 left-3 bg-[#FF9900] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md group-hover:brightness-110 transition">
+            Available on Amazon
+          </span>
         </a>
       </div>
 
@@ -39,13 +45,13 @@ export default function Hero() {
       {/* Right: Text Content */}
       <div className="md:w-1/2 text-center md:text-left space-y-4 px-4 sm:px-6 md:px-8">
         {/* Subheading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-fredoka text-orange-600 leading-snug">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-fredoka text-orange leading-snug">
           A heartwarming story for kids — and the dogs who love them.
         </h2>
 
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
           Read{" "}
-          <span className="font-semibold text-orange-600 italic">
+          <span className="font-semibold text-orange italic">
             Toby the Story Dog
           </span>{" "}
           together and discover a tail-wagging adventure full of humor, hidden
@@ -56,24 +62,24 @@ export default function Hero() {
         {/* Feature Highlights */}
         <ul className="text-gray-800 text-base mt-6 space-y-2 font-semibold text-left">
           <li className="flex items-start justify-start">
-            <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
+            <FaPaw className="text-orange flex-shrink-0 w-5 h-5 mr-2 mt-1" />
             Interactive fun: “Give your dog a treat!” and “High-five your pup!”
           </li>
 
           <li className="flex items-start justify-start">
-            <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
+            <FaPaw className="text-orange flex-shrink-0 w-5 h-5 mr-2 mt-1" />
             Hidden bones to find on every page — random “Easter eggs” for
             adults.
           </li>
 
           <li className="flex items-start justify-start">
-            <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
+            <FaPaw className="text-orange flex-shrink-0 w-5 h-5 mr-2 mt-1" />
             Perfect bedtime story for kids and furry friends
           </li>
 
           <li className="flex items-start justify-start">
-            <FaPaw className="text-orange-500 flex-shrink-0 w-5 h-5 mr-2 mt-1" />
-            A feel-good gift that celebrates love and rescue
+            <FaPaw className="text-orange flex-shrink-0 w-5 h-5 mr-2 mt-1" />A
+            feel-good gift that celebrates love and rescue
           </li>
         </ul>
       </div>

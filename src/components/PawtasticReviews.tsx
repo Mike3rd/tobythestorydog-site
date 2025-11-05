@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function PawtasticReviews() {
   return (
     <section className="max-w-3xl mx-auto py-16 px-4">
-      <h2 className="text-3xl font-fredoka text-orange-600 mb-8 text-center">
+      <h2 className="text-3xl font-fredoka text-orange mb-8 text-center">
         PAW-sitive Reviews
       </h2>
 

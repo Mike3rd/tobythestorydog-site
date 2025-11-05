@@ -1,7 +1,7 @@
 export default function AboutToby() {
   return (
     <section className="max-w-3xl text-center py-16 px-4">
-      <h2 className="text-3xl font-fredoka text-orange-600 mb-6">
+      <h2 className="text-3xl font-fredoka text-orange mb-6">
         Meet Toby the Story Dog!
       </h2>
 

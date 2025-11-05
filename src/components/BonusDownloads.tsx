@@ -70,7 +70,7 @@ export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
 
   return (
     <section className="max-w-3xl text-center py-16 px-4 mx-auto">
-      <h2 className="text-3xl font-fredoka text-orange-600 mb-4">
+      <h2 className="text-3xl font-fredoka text-orange mb-4">
         Coming Soon- Bonus Download{" "}
       </h2>
       <p className="text-gray-700 leading-relaxed mb-6">
