@@ -13,25 +13,25 @@ export default function Hero() {
       <PawPrints />
 
       {/* Book Cover */}
-      <div className="relative mb-8 w-full max-w-xs sm:max-w-sm md:max-w-md z-10 group">
+      <div className="mb-8 w-full max-w-xs sm:max-w-sm md:max-w-md z-10 relative mx-auto">
         <a
           href="https://www.amazon.com/dp/B0FYTD9T81"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Buy Toby the Story Dog on Amazon"
-          className="block relative"
+          className="block group"
         >
           <Image
             src="/book-cover.webp"
-            alt="Toby the Story Dog book cover"
+            alt="Toby Adopts a Hooman"
             width={360}
             height={360}
-            className="rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
+            className="rounded-lg shadow-2xl mx-auto"
             loading="eager"
           />
 
           {/* Amazon Badge */}
-          <span className="absolute bottom-3 left-3 bg-[#FF9900] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md group-hover:brightness-110 transition">
+          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#FF9900] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md group-hover:brightness-110 transition">
             Available on Amazon
           </span>
         </a>
