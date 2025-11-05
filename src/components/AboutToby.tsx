@@ -21,12 +21,15 @@ export default function AboutToby() {
       {/* Chat callout box at the end, before chatbox */}
       <div className="bg-accent border border-gray-300 rounded-lg p-6 mb-4 text-gray-800 shadow-sm text-lg">
         🐶 <strong>Chat with Toby!</strong> Ask him fun questions like{" "}
-        <em>
-          “What’s your favorite treat?”, “Can you tell me a silly dog story?”
-        </em>{" "}
-        or <em>“Can you tell me a silly dog story?”</em> and see his playful
+        <em>“What’s your favorite treat?”, “Who’s your best friend?”</em> or{" "}
+        <em>“Can you tell me a funny dog story?”</em> and see his playful
         answers.
       </div>
+      {/* Disclaimer */}
+      <p className="text-gray-500 text-sm mt-3">
+        *Toby’s replies are powered by AI for entertainment and educational fun
+        — not every answer is guaranteed to be factual.*
+      </p>
     </section>
   );
 }

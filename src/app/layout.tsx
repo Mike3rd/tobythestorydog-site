@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "Meet Toby the Story Dog! Explore his stories, download fun bonuses, and find perfect gifts for pet lovers.",
   keywords: [
     "Toby the Story Dog",
+    "Budget Christmas Present",
     "pet gifts",
     "dog stories",
     "fun activities for kids",
