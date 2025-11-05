@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1346)"><rect width="1000" height="1000" fill="#ff8200"></rect><g transform="matrix(24.137931034482758,0,0,24.137931034482758,162.0689655172414,150)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="29" viewBox="0 0 28 29"><image width="28" height="29" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAdCAYAAAC5UQwxAAAACXBIWXMAAAsSAAALEgHS3X78AAAB2UlEQVRIiaVW0XGDMAx95PpfNigjeAQ2aDZIOkEzAiOkG9ANskHdCUonKJ2gZILXD+TGGNkG+u583CFZz1hPQgVJ/BOVLACwWW+SW1dJ8sIp2ty+XFBDsorYLHXE/JOENcnBC2ID+ylCRtm7irAKyByOno9mdzBrCdtIoIvY9wkypshIYqfo6BDRVylPk9Dgq7Kn9lQ8I6wTwfqEzaH14lgAPwDeAHw5292CIA5dxv4iJGcAz4r9AMBq6oyhSvg4Fcfy79BoidUUeA589kJieVNvkyEjyaNGeAycOo5dJdd1UqVCkj3JMtVhGk5rL7VSqaAcxpBEwXjzNrIqeZYYldqJ4obA9yMS54pRtaPogpNWHPPVLzhx+PWaYFoG6fBzkFOYRho2asPxeuuQyCc0zCc8hkYLmloFyQuAx0xRx/CJaasrATTBO4uxGQwuh1u/zsGvzVislt6Vrs2dRpgri7+DFSSd3O83Xmsh+x8SPt+QP8ZO7rYC8L6R0GTIgNtfZFaHNeeDUQ4mY+/IeR1qDWAJcS/+NmIPm352aksNS+Rt7CjF18q7EyPT25JijZ2eXN7cJ4W/RBRaY75iFNug2KLQhqgQHYAnIfBxWksGYNEX+qi9Q6wmA4BfahMUkjeVMx0AAAAASUVORK5CYII="></image></svg></g></g><defs><clipPath id="SvgjsClipPath1346"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        fill: #ff8200;
+      }
+
+      .st3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st1" width="1000" height="1000" rx="350" ry="350"/>
+    </clipPath>
+  </defs>
+  <g class="st3">
+    <rect class="st2" width="1000" height="1000"/>
+  </g>
+  <g>
+    <path class="st0" d="M382.88,476.85c38.83-3.4,71.84-3.3,107.48,15.08,81.61,42.1,71.29,216.37,43.13,290.17-20.02,52.47-39.01,65.72-96.52,58.62-59.33-7.32-63-69.61-101.66-102.36-34.65-29.36-93.43-38.01-133.34-70.76-136.45-111.97,90.91-182.86,180.91-190.75Z"/>
+    <path class="st0" d="M618.63,500.92c-80.39-80.53,140.88-254.87,209.35-163.55,64.79,86.41-137.16,235.86-209.35,163.55Z"/>
+    <path class="st0" d="M579.63,159.64c150.16-29.95,58.36,265.48-63.38,243.67-97.74-17.51-35.91-223.87,63.38-243.67Z"/>
+    <path class="st0" d="M326.22,216.19c162.39-42.16,85.38,286.5-36.01,222.45-73.92-39-35.78-203.82,36.01-222.45Z"/>
+    <path class="st0" d="M685.11,574.85c42.71-8.85,111.26-3.28,114.97,51.31,7.11,104.51-185.94,177.91-218.63,83.74-20.5-59.06,50.5-124.03,103.66-135.05Z"/>
+  </g>
+</svg>

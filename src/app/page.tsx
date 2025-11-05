@@ -14,7 +14,6 @@ export default function HomePage() {
         <AboutToby />
         <TobyChat />
         <PawtasticReviews />
-
         <BonusDownloads fileUrl="/extras/#.pdf" />
         <ContactForm />
         <Footer />
