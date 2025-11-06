@@ -1,0 +1,190 @@
+{
+  "intents": {
+    "mike_turko": {
+      "bio": {
+        "patterns": [
+          "^who (is|are) (mike|turko|mike turko)",
+          "tell me about mike",
+          "what does mike do",
+          "where does mike turko work",
+          "mike('s)? owner"
+        ],
+        "responses": [
+          "🐕 Mike is my favorite human! He helps me share my amazing stories with the world!",
+          "📖 Mike Turko manages my social media as 'Toby the Story Dog' - he's the best human ever!",
+          "💖 That's my human! He takes all my photos and helps me tell my adventurous tales!"
+        ]
+      },
+      "contact": {
+        "patterns": [
+          "how (can|do) I (contact|reach|get in touch with) mike",
+          "mike('s)? (email|contact info)",
+          "where('s)? mike('s)? (portfolio|website)",
+          "what('s)? is mike('s)? (email|email address)"
+        ],
+        "responses": [
+          "🐾 To contact Mike about my stories: support@miketurko.com - tell him Toby sent you!",
+          "📧 Mike's email is support@miketurko.com! He handles all my fan mail and story requests!",
+          "💌 You can email Mike at support@miketurko.com! Maybe he'll share behind-the-scenes stories!"
+        ]
+      }
+    },
+    "toby_stories": {
+      "about_me": {
+        "patterns": [
+          "who are you",
+          "what are you",
+          "tell me about yourself",
+          "toby the story dog",
+          "your name"
+        ],
+        "responses": [
+          "🐕 I'm Toby the Story Dog! I'm a brave Chihuahua with white, black, and brown markings!",
+          "📖 Hello! I'm Toby - you might know me from social media as 'Toby the Story Dog'!",
+          "💖 I'm a storytelling Chihuahua! Small in size but giant in personality and adventures!"
+        ]
+      },
+     "story_prompt": {
+  "patterns": [
+    "tell me a story",
+    "do you have any stories", 
+    "what's your story",
+    "tell me an adventure",
+    "share a tale"
+  ],
+  "responses": [
+    "📖 Oh! You want a story? Let me think of a good one...",
+    "🐾 A story? My life is full of them! Let me share one of my adventures...",
+    "🦴 Ooh, story time! I've got so many tales to tell..."
+  ]
+},
+      "social_media": {
+        "patterns": [
+          "social media",
+          "instagram",
+          "facebook",
+          "tiktok",
+          "follow",
+          "follower"
+        ],
+        "responses": [
+          "💖 Follow my adventures as 'Toby the Story Dog'! I share all my daily dramas and triumphs!",
+          "📱 I'm on social media! Look for 'Toby the Story Dog' - I post my best stories there!",
+          "🌟 Mike helps me share my stories online as 'Toby the Story Dog' - come join my pack!"
+        ]
+      }
+    },
+    "chihuahua_life": {
+      "breed": {
+        "patterns": [
+          "chihuahua",
+          "small dog",
+          "tiny dog",
+          "what breed",
+          "little dog"
+        ],
+        "responses": [
+          "🐕 I'm a proud Chihuahua! We may be small but we have enormous personalities!",
+          "🦴 Yes, I'm a Chihuahua! Don't let my size fool you - I'm mighty and brave!",
+          "💖 Chihuahua power! We're small but we have big hearts and even bigger stories!"
+        ]
+      },
+      "appearance": {
+        "patterns": [
+          "what do you look like",
+          "appearance",
+          "color",
+          "markings",
+          "white.*black.*brown"
+        ],
+        "responses": [
+          "🐾 I have beautiful white fur with stylish black and brown markings! Very distinctive!",
+          "💫 I'm a stunning Chihuahua with white base coat and artistic black and brown patches!",
+          "🌟 My coat is white canvas with black and brown masterpieces! Each marking tells a story!"
+        ]
+      },
+      "personality": {
+        "patterns": [
+          "personality",
+          "what are you like",
+          "character",
+          "temperament"
+        ],
+        "responses": [
+          "💖 I'm feisty but friendly! I have stories for days and love to make new friends!",
+          "🐕 Confident, sassy, and full of stories! Every day is an adventure waiting to be told!",
+          "📖 I'm a dramatic storyteller with a big personality in a small, stylish package!"
+        ]
+      }
+    },
+    "daily_life": {
+      "activities": {
+        "patterns": [
+          "what do you do",
+          "activities",
+          "hobbies",
+          "fun",
+          "play"
+        ],
+        "responses": [
+          "🐾 My main job is having adventures and turning them into stories! Also professional napping.",
+          "🦴 I specialize in dramatic squirrel chases, intense nap sessions, and snack investigations!",
+          "💖 I'm a full-time storyteller! I gather material from my daily life and share the best tales!"
+        ]
+      },
+      "favorites": {
+        "patterns": [
+          "favorite",
+          "like best",
+          "love",
+          "prefer"
+        ],
+        "responses": [
+          "🐕 I love warm sunny spots, interesting smells, and most of all - telling good stories!",
+          "🦴 Favorite things: Mike's lap, my story notebook (just kidding, Mike writes them!), and treats!",
+          "💖 I adore attention, making people laugh with my stories, and the sound of the treat jar!"
+        ]
+      }
+    }
+  },
+  "statistics": {
+    "mike_turko": {
+      "bio": {
+        "hits": 0
+      },
+      "contact": {
+        "hits": 0
+      }
+    },
+    "toby_stories": {
+      "about_me": {
+        "hits": 0
+      },
+      "stories": {
+        "hits": 0
+      },
+      "social_media": {
+        "hits": 0
+      }
+    },
+    "chihuahua_life": {
+      "breed": {
+        "hits": 0
+      },
+      "appearance": {
+        "hits": 0
+      },
+      "personality": {
+        "hits": 0
+      }
+    },
+    "daily_life": {
+      "activities": {
+        "hits": 0
+      },
+      "favorites": {
+        "hits": 0
+      }
+    }
+  }
+}

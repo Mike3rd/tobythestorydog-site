@@ -73,11 +73,6 @@ export default function AboutToby() {
           answers.
         </p>
       </div>
-      {/* Disclaimer */}
-      <p className="text-gray-500 text-sm mt-3">
-        *Toby’s replies are powered by AI for entertainment and educational fun
-        — not every answer is guaranteed to be factual.*
-      </p>
     </section>
   );
 }
