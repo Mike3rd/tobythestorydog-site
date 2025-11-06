@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "@/styles/globals.css";
 import { fredoka, nunito, barriecito, rubik, luckiestguy } from "@/lib/fonts";
 import ClientPostHogProvider from "@/components/ClientPostHogProvider"; // new file
@@ -26,9 +27,9 @@ export const metadata: Metadata = {
     siteName: "Toby the Story Dog",
     images: [
       {
-        url: "https://www.tobythestorydog.com/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "https://www.tobythestorydog.com/book-cover.webp",
+        width: 360,
+        height: 360,
         alt: "Toby the Story Dog",
       },
     ],
@@ -37,10 +38,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toby the Story Dog – Pet Gifts, Fun PDFs & Adventures",
+    title: "Toby Adopts a Hooman – Pet Gifts, Fun PDFs & Adventures",
     description:
-      "Meet Toby the Story Dog! Explore his stories, download fun bonuses, and find perfect gifts for pet lovers.",
-    images: ["https://www.tobythestorydog.com/og-image.png"],
+      "Meet Toby Adopts a Hooman! Explore his stories, download fun bonuses, and find perfect gifts for pet lovers.",
+    images: ["https://www.tobythestorydog.com/book-cover.webp"],
   },
   icons: {
     icon: [
@@ -69,6 +70,48 @@ export default function RootLayout({
     >
       <body className="bg-cream text-gray-800 font-nunito">
         <ClientPostHogProvider />
+        {children}
+
+        {/* JSON-LD FAQ Structured Data for AI & Rich Results */}
+        <Script
+          type="application/ld+json"
+          id="faq-jsonld"
+          strategy="afterInteractive"
+        >
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is 'Toby Adopts a Hooman'?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Toby Adopts a Hooman is a smart, funny picture book designed for kids and dog lovers. It also comes with bonus PDFs and fun activities on website www.tobythestorydog.com."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where can I buy the book?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can purchase 'Toby Adopts a Hooman' on Amazon."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this book suitable for dogs too?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "While Toby Adopts a Hooman is meant for humans to read, dogs love it when you read aloud — especially with treats nearby!"
+                }
+              }
+            ],
+            "image": "https://www.tobythestorydog.com/book-cover.webp"
+          }
+          `}
+        </Script>
         {children}
       </body>
     </html>
