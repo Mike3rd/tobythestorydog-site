@@ -118,7 +118,9 @@ export default function TobyChat({
       // Show welcome message if no chat history exists
       const welcomeMessage: Message = {
         content:
-          "🐶 Woof! I'm Toby the Story Dog! I'm a brave Chihuahua with white, black, and brown markings. Ask me about my adventures, what I look like, or my favorite hoomans Elayne & Mike! What would you like to know?",
+          "🐕 Woof! I'm Toby the Story Dog!\n\n" +
+          "Ask me for a STORY - that's my favorite! Beach adventures, treat quests, Cheezy Crow mischief... I've got them all!\n\n" +
+          "Or ask me anything - I don't bite! What would you like to know?",
         isUser: false,
       };
       setMessages([welcomeMessage]);
