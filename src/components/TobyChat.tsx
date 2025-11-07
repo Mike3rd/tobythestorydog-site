@@ -29,15 +29,37 @@ const cleanupOldChats = (): void => {
     if (storedChats) {
       const chats: ChatMessage[] = JSON.parse(storedChats);
 
-      // Filter out chats older than 1 week
-      const now = Date.now();
-      const recentChats = chats.filter(
-        (chat) => now - chat.timestamp < MAX_STORAGE_AGE
-      );
+      // 🆕 PRESERVE WELCOME MESSAGE - always keep the first message if it's from Toby
+      let recentChats = chats;
+      if (chats.length > 0 && chats[0].sender === "toby") {
+        const welcomeMessage = chats[0];
+        const otherChats = chats.slice(1);
 
-      // If still too many, keep only the most recent
-      if (recentChats.length > MAX_CHAT_HISTORY) {
-        recentChats.splice(0, recentChats.length - MAX_CHAT_HISTORY);
+        // Filter out other chats older than 1 week
+        const now = Date.now();
+        const recentOtherChats = otherChats.filter(
+          (chat) => now - chat.timestamp < MAX_STORAGE_AGE
+        );
+
+        // If still too many, keep only the most recent
+        if (recentOtherChats.length > MAX_CHAT_HISTORY - 1) {
+          recentOtherChats.splice(
+            0,
+            recentOtherChats.length - (MAX_CHAT_HISTORY - 1)
+          );
+        }
+
+        recentChats = [welcomeMessage, ...recentOtherChats];
+      } else {
+        // Normal cleanup for existing chats without welcome message
+        const now = Date.now();
+        recentChats = chats.filter(
+          (chat) => now - chat.timestamp < MAX_STORAGE_AGE
+        );
+
+        if (recentChats.length > MAX_CHAT_HISTORY) {
+          recentChats.splice(0, recentChats.length - MAX_CHAT_HISTORY);
+        }
       }
 
       localStorage.setItem("tobyChat", JSON.stringify(recentChats));
