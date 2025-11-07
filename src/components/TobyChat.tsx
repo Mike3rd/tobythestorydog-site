@@ -14,6 +14,39 @@ interface TobyChatProps {
   apiEndpoint?: string; // default endpoint
 }
 
+interface ChatMessage {
+  text: string;
+  sender: "user" | "toby";
+  timestamp: number;
+}
+
+const cleanupOldChats = (): void => {
+  const MAX_CHAT_HISTORY = 50;
+  const MAX_STORAGE_AGE = 7 * 24 * 60 * 60 * 1000; // 1 week
+
+  try {
+    const storedChats = localStorage.getItem("tobyChat");
+    if (storedChats) {
+      const chats: ChatMessage[] = JSON.parse(storedChats);
+
+      // Filter out chats older than 1 week
+      const now = Date.now();
+      const recentChats = chats.filter(
+        (chat) => now - chat.timestamp < MAX_STORAGE_AGE
+      );
+
+      // If still too many, keep only the most recent
+      if (recentChats.length > MAX_CHAT_HISTORY) {
+        recentChats.splice(0, recentChats.length - MAX_CHAT_HISTORY);
+      }
+
+      localStorage.setItem("tobyChat", JSON.stringify(recentChats));
+    }
+  } catch (error) {
+    console.log("Error cleaning chat history:", error);
+  }
+};
+
 export default function TobyChat({
   apiEndpoint = "https://mturko.pythonanywhere.com/chat",
 }: TobyChatProps) {
@@ -22,13 +55,44 @@ export default function TobyChat({
   const [loading, setLoading] = useState(false);
   const chatBoxRef = useRef<HTMLDivElement>(null);
 
+  // 🆕 ADD THIS USE EFFECT TO CALL THE CLEANUP FUNCTION
+  useEffect(() => {
+    // Clean up old chats on component mount and set up periodic cleaning
+    cleanupOldChats();
+
+    const interval = setInterval(cleanupOldChats, 60 * 60 * 1000); // Clean every hour
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
   // Load previous messages from localStorage OR show welcome message
   useEffect(() => {
-    const chatHistory: Message[] = JSON.parse(
-      localStorage.getItem("tobyChat") || "[]"
-    );
+    const storedChats = localStorage.getItem("tobyChat");
 
-    if (chatHistory.length === 0) {
+    if (storedChats) {
+      try {
+        // Try to parse as ChatMessage[] first (new format with timestamps)
+        const chatHistory: ChatMessage[] = JSON.parse(storedChats);
+        // Convert to Message[] for component
+        const formattedMessages: Message[] = chatHistory.map((chat) => ({
+          content: chat.text,
+          isUser: chat.sender === "user",
+        }));
+        setMessages(formattedMessages);
+      } catch {
+        // If parsing fails, try old Message[] format
+        const chatHistory: Message[] = JSON.parse(storedChats);
+        setMessages(chatHistory);
+
+        // Convert old format to new format with timestamps
+        const updatedChats: ChatMessage[] = chatHistory.map((msg) => ({
+          text: msg.content,
+          sender: msg.isUser ? "user" : "toby",
+          timestamp: Date.now(), // Approximate timestamp for old messages
+        }));
+        localStorage.setItem("tobyChat", JSON.stringify(updatedChats));
+      }
+    } else {
       // Show welcome message if no chat history exists
       const welcomeMessage: Message = {
         content:
@@ -36,8 +100,14 @@ export default function TobyChat({
         isUser: false,
       };
       setMessages([welcomeMessage]);
-    } else {
-      setMessages(chatHistory);
+
+      // Also save as ChatMessage with timestamp
+      const welcomeChatMessage: ChatMessage = {
+        text: welcomeMessage.content,
+        sender: "toby",
+        timestamp: Date.now(),
+      };
+      localStorage.setItem("tobyChat", JSON.stringify([welcomeChatMessage]));
     }
   }, []);
 
@@ -52,7 +122,15 @@ export default function TobyChat({
     const newMsg: Message = { content, isUser };
     setMessages((prev) => {
       const updated = [...prev, newMsg];
-      localStorage.setItem("tobyChat", JSON.stringify(updated));
+
+      // Also save as ChatMessage with timestamp
+      const chatMessages: ChatMessage[] = updated.map((msg, index) => ({
+        text: msg.content,
+        sender: msg.isUser ? "user" : "toby",
+        timestamp: Date.now() - (updated.length - index - 1) * 1000, // Stagger timestamps slightly
+      }));
+
+      localStorage.setItem("tobyChat", JSON.stringify(chatMessages));
       return updated;
     });
   };
