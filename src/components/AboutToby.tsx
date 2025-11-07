@@ -64,14 +64,73 @@ export default function AboutToby() {
         </ul>
       </div>
 
-      {/* Chat callout box at the end, before chatbox */}
-      <div className="bg-accent border border-gray-300 rounded-lg p-6 mb-4 text-gray-800 shadow-sm text-lg">
-        <p>
-          🐶 <strong>Chat with Toby!</strong> Ask him fun questions like{" "}
-          <em>“What’s your favorite treat?”, “Who’s your best friend?”</em> or{" "}
-          <em>“Can you tell me a funny dog story?”</em> and see his playful
-          answers.
-        </p>
+      {/* 🆕 ENHANCED CHAT CALLOUT (NO BUTTONS) */}
+      {/* 🆕 ENHANCED CHAT CALLOUT (STYLED BOXES, NO BUTTONS) */}
+      <div className="bg-gradient-to-br from-orange-50 to-yellow-50 border-2 border-orange-200 rounded-xl p-6 mb-6 shadow-lg">
+        <div className="text-center mb-4">
+          <h3 className="text-3xl font-fredoka text-orange mb-2">
+            Chat Live with Toby!
+          </h3>
+          <p className="text-gray-700 text-lg">
+            The internet&apos;s most charming Chihuahua is waiting to share
+            adventures with you!
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <div className="text-center p-3 bg-white rounded-lg border border-orange-100">
+            <span className="text-2xl block mb-2">📖</span>
+            <strong className="text-orange-700">
+              Get Personalized Stories
+            </strong>
+            <p className="text-sm text-gray-600 mt-1">
+              Ask about Toby&apos;s wild adventures!
+            </p>
+          </div>
+
+          <div className="text-center p-3 bg-white rounded-lg border border-orange-100">
+            <span className="text-2xl block mb-2">🦴</span>
+            <strong className="text-orange-700">Discover Pack Secrets</strong>
+            <p className="text-sm text-gray-600 mt-1">
+              Learn about Toby&apos;s pack hierarchy
+            </p>
+          </div>
+
+          <div className="text-center p-3 bg-white rounded-lg border border-orange-100">
+            <span className="text-2xl block mb-2">🎭</span>
+            <strong className="text-orange-700">Meet the Characters</strong>
+            <p className="text-sm text-gray-600 mt-1">
+              Chat with the book series star!
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg p-4 border border-orange-200">
+          <h4 className="font-fredoka text-orange-600 mb-3 text-lg">
+            💡 Try Asking Toby:
+          </h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="bg-orange-100 text-orange-800 py-2 px-3 rounded-lg text-sm border border-orange-300">
+              &quot;Who&apos;s in your pack?&quot;
+            </div>
+            <div className="bg-orange-100 text-orange-800 py-2 px-3 rounded-lg text-sm border border-orange-300">
+              &quot;Cheezy Crow adventure!&quot;
+            </div>
+            <div className="bg-orange-100 text-orange-800 py-2 px-3 rounded-lg text-sm border border-orange-300">
+              &quot;Tell me about Finley Cat&quot;
+            </div>
+            <div className="bg-orange-100 text-orange-800 py-2 px-3 rounded-lg text-sm border border-orange-300">
+              &quot;Beach dune story!&quot;
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 text-center">
+          <p className="text-sm text-gray-600 bg-orange-50 py-2 px-4 rounded-lg border border-orange-100">
+            <strong>🌟 Did You Know?</strong> Toby is based on a real Chihuahua!
+            His stories come from actual adventures.
+          </p>
+        </div>
       </div>
     </section>
   );
