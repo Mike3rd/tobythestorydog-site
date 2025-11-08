@@ -18,6 +18,8 @@ export const metadata: Metadata = {
     "pet adventures",
     "dog lover gifts",
     "read to your dog",
+    "Toby adopts a hooman",
+    "Toby adopts a human",
   ],
   openGraph: {
     title: "Toby the Story Dog – Pet Gifts, Fun PDFs & Adventures",
