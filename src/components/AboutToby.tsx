@@ -100,7 +100,7 @@ export default function AboutToby() {
             <span className="text-2xl block mb-2">🎭</span>
             <strong className="text-orange-700">Meet the Characters</strong>
             <p className="text-sm text-gray-600 mt-1">
-              Chat with the book series star!
+              Chat with the book series stars!
             </p>
           </div>
         </div>
