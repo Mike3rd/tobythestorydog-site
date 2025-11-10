@@ -75,7 +75,8 @@ export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
       </h2>
       <p className="text-gray-700 leading-relaxed mb-6">
         Get a fun activity pack featuring Toby and friends! Enter your email
-        below to download and stay updated with occasional Toby news.
+        below to download and stay updated with occasional Toby the Story Dog
+        news.
       </p>
 
       <form

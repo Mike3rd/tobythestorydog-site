@@ -32,7 +32,7 @@ export default function AboutToby() {
       {/* Toby's Traits */}
       <div className="text-gray-700 mb-8">
         <h3 className="text-2xl font-fredoka text-orange mb-3">
-          Toby the Story Dog&apos;s Favorite Things
+          Toby&apos;s Favorite Things
         </h3>
         <ul className="space-y-2 text-left inline-block">
           <li className="flex items-start">
