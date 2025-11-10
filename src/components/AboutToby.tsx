@@ -112,9 +112,6 @@ export default function AboutToby() {
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;I&apos;m [Your Name] - tell me a story!&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
               &quot;Poem about your adventures!&quot;
             </div>
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
@@ -128,6 +125,18 @@ export default function AboutToby() {
             </div>
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
               &quot;Tell me about Finley Cat!&quot;
+            </div>
+            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
+              &quot;What&apos;s the real Toby's daily routine?&quot;
+            </div>
+            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
+              &quot;Tell me the REAL Toby!&quot;
+            </div>
+            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
+              &quot;Beach adventure story!&quot;
+            </div>
+            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
+              &quot;Toll bridge crossing!&quot;
             </div>
           </div>
         </div>

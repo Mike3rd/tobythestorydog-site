@@ -118,9 +118,12 @@ export default function TobyChat({
       // Show welcome message if no chat history exists
       const welcomeMessage: Message = {
         content:
-          "🐶 Woof! I'm Toby the Story Dog!\n\n" +
-          "Ask me for a STORY - that's my favorite! Beach adventures, treat quests, Cheezy Crow mischief... I've got them all!\n\n" +
-          "Or ask me anything - I don't bite! What would you like to know?",
+          "🐕 WOOF! I'm Toby the Story Dog!\n\n" +
+          "I LOVE telling stories from my book adventures! Ask me about:\n" +
+          "- My Camden street life with Cheezy Crow\n" +
+          "- Funny adventures with my adopted family\n" +
+          "- Or ask about the REAL Toby - his routines and favorite things!\n\n" +
+          "What would you like to know?",
         isUser: false,
       };
       setMessages([welcomeMessage]);
