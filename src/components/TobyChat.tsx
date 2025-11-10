@@ -232,7 +232,7 @@ export default function TobyChat({
           <SlSpeech />
         </span>
         <h2 className="text-xl font-luckiestguy text-text_hero_title">
-          Chat with Toby
+          Chat with Toby the Story Dog
         </h2>
       </div>
 

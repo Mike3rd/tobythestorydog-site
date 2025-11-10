@@ -74,8 +74,8 @@ export default function BonusDownload({ fileUrl }: BonusDownloadProps) {
         Coming Soon- Bonus Download{" "}
       </h2>
       <p className="text-gray-700 leading-relaxed mb-6">
-        Get a fun coloring page featuring Toby! Enter your email below to
-        download and stay updated with occasional Toby news.
+        Get a fun activity pack featuring Toby and friends! Enter your email
+        below to download and stay updated with occasional Toby news.
       </p>
 
       <form

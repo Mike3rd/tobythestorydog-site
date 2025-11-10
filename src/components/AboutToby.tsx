@@ -32,7 +32,7 @@ export default function AboutToby() {
       {/* Toby's Traits */}
       <div className="text-gray-700 mb-8">
         <h3 className="text-2xl font-fredoka text-orange mb-3">
-          Toby’s Favorite Things
+          Toby the Story Dog&apos;s Favorite Things
         </h3>
         <ul className="space-y-2 text-left inline-block">
           <li className="flex items-start">
@@ -68,7 +68,7 @@ export default function AboutToby() {
       <div className="bg-gradient-to-br from-orange/10 to-yellow-50 border-2 border-orange/20 rounded-xl p-6 mb-6 shadow-lg">
         <div className="text-center mb-4">
           <h3 className="text-3xl font-fredoka text-orange mb-2">
-            Chat Live with Toby The Story Dog!
+            Chat Live with Toby the Story Dog!
           </h3>
           <p className="text-gray-700 text-lg">
             The internet&apos;s most charming Chihuahua is waiting to share
