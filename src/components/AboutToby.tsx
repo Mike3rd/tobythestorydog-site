@@ -152,7 +152,7 @@ export default function AboutToby() {
           </div>
           <p className="text-sm text-gray-600 mt-2">
             <strong>📚 Did You Know?</strong> Toby The Story Dog is based on a
-            real rescue Chihuahua named Toby! His stories come from actual
+            real rescue Chihuahua mix named Toby! His stories come from actual
             adventures.
           </p>
         </div>
