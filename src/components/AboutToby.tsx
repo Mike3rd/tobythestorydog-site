@@ -71,7 +71,7 @@ export default function AboutToby() {
             Chat Live with Toby the Story Dog!
           </h3>
           <p className="text-gray-700 text-lg">
-            The internet&apos;s most charming Chihuahua is waiting to share
+            The internet&apos;s most charming Chihuahua mix is waiting to share
             adventures with you!
           </p>
         </div>
@@ -130,7 +130,7 @@ export default function AboutToby() {
               &quot;What&apos;s the real Toby&apos;s daily routine?&quot;
             </div>
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Tell me the REAL Toby!&quot;
+              &quot;Tell me about the REAL Toby!&quot;
             </div>
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
               &quot;Beach adventure story!&quot;
