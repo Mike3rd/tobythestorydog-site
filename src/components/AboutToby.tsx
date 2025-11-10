@@ -91,7 +91,7 @@ export default function AboutToby() {
             <span className="text-2xl block mb-2">🦴</span>
             <strong className="text-orange block mb-1">Pack Life</strong>
             <p className="text-sm text-gray-600">
-              Learn about Toby&apos;s pack and daily routines
+              Learn about the real Toby&apos;s pack and daily routines
             </p>
           </div>
 
@@ -127,7 +127,7 @@ export default function AboutToby() {
               &quot;Tell me about Finley Cat!&quot;
             </div>
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;What&apos;s the real Toby's daily routine?&quot;
+              &quot;What&apos;s the real Toby&apos;s daily routine?&quot;
             </div>
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
               &quot;Tell me the REAL Toby!&quot;
