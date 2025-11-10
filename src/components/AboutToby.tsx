@@ -68,7 +68,7 @@ export default function AboutToby() {
       <div className="bg-gradient-to-br from-orange/10 to-yellow-50 border-2 border-orange/20 rounded-xl p-6 mb-6 shadow-lg">
         <div className="text-center mb-4">
           <h3 className="text-3xl font-fredoka text-orange mb-2">
-            Chat Live with Toby!
+            Chat Live with Toby The Story Dog!
           </h3>
           <p className="text-gray-700 text-lg">
             The internet&apos;s most charming Chihuahua is waiting to share
