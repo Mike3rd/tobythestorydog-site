@@ -21,11 +21,11 @@ export default function AboutToby() {
         </div>
         <p className="md:w-2/3 text-lg">
           Hi, I’m Toby — full-time napper, part-time cat impersonator, and proud
-          owner of two hoomans. My hoomans call me a scaredy cat and a little
-          stubborn sometimes, but that’s just because I know what I want. I like
-          to start each day with zoomies, chicken treats, and deciding where
-          we’re going for our walk. My hoomans thinks they’re in charge, but
-          I’ve got the leash — and the map (in my nose).
+          owner of two hoomans. My hoomans call me a scaredy cat and say
+          I&apos;m stubborn, but that&apos;s just because I know what I want. I
+          like to start each day with zoomies, chicken treats, and deciding
+          where we&apos;re going for our walk. My hoomans think they’re in
+          charge, but I’ve got the leash — and the map (in my nose).
         </p>
       </div>
 
