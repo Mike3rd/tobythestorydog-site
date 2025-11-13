@@ -69,7 +69,7 @@ export default function Hero() {
           <li className="flex items-start justify-start">
             <FaPaw className="text-orange flex-shrink-0 w-5 h-5 mr-2 mt-1" />
             Bonus fun! Hidden bones for kids to find on each page — Easter eggs
-            and clever references for the grown-ups. (There are 10 hidden Easter
+            and clever references for grown-ups. (There are 10 hidden Easter
             eggs and references in total — can you find them all?)
           </li>
 
