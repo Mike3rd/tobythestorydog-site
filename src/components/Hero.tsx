@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="md:w-1/2 text-center md:text-left space-y-4 px-4 sm:px-6 md:px-8">
         {/* Subheading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-fredoka text-orange leading-snug">
-          A heartwarming story for kids — and the dogs who love them.
+          A Bedtime Story for Dogs (and their Humans who love them)
         </h2>
 
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
@@ -68,8 +68,9 @@ export default function Hero() {
 
           <li className="flex items-start justify-start">
             <FaPaw className="text-orange flex-shrink-0 w-5 h-5 mr-2 mt-1" />
-            Hidden bones to find on every page — random “Easter eggs” for
-            adults.
+            Bonus fun! Hidden bones for kids to find on each page — Easter eggs
+            and clever references for the grown-ups. (There are 10 hidden Easter
+            eggs and references in total — can you find them all?)
           </li>
 
           <li className="flex items-start justify-start">
