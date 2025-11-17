@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="md:w-1/2 text-center md:text-left space-y-4 px-4 sm:px-6 md:px-8">
         {/* Subheading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-fredoka text-orange leading-snug">
-          A Bedtime Story for Dogs (and their Humans who love them)
+          A First-of-Its-Kind Storytime Book Made for Dogs and Their Humans
         </h2>
 
         <p className="text-lg text-gray-700 leading-relaxed mt-4">

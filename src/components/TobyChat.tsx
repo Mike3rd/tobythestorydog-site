@@ -307,7 +307,7 @@ export default function TobyChat({
             // Fire your existing message logic
             sendMessage();
           }}
-          className="px-4 py-2 bg-buttons text-white rounded-lg font-fredoka hover:brightness-110 transition"
+          className="px-4 py-2 bg-buttons text-text_hero_subtitle rounded-lg font-fredoka hover:brightness-110 transition"
         >
           Send
         </button>
