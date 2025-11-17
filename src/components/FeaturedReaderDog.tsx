@@ -22,7 +22,7 @@ export default function FeaturedReaderDogs() {
         href="/reader-dogs"
         className="mt-12 px-8 py-4 bg-buttons text-text_hero_subtitle rounded-full font-fredoka text-lg shadow-lg hover:scale-105 transition-transform"
       >
-        See All Dogs Who Read →
+        More club members →
       </Link>
     </section>
   );

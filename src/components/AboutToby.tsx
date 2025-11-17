@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutToby() {
   return (
-    <section className="max-w-3xl mx-auto text-center py-16 px-4">
+    <section className="max-w-3xl mx-auto text-center py-4 px-4">
       <h2 className="text-3xl font-fredoka text-orange mb-8">
         Meet Toby the Story Dog!
       </h2>
@@ -64,8 +64,15 @@ export default function AboutToby() {
         </ul>
       </div>
 
+      <div className="mt-4 text-center">
+        <p className="text-sm text-gray-600 mt-2 border border-orange/30 rounded-lg py-2 px-4 bg-orange/5 ">
+          <strong>📚 Did You Know?</strong> Toby The Story Dog is based on a
+          real rescue Chihuahua mix named Toby!
+        </p>
+      </div>
+
       {/* 🆕 ENHANCED CHAT CALLOUT (CLEANER DESIGN) */}
-      <div className="bg-gradient-to-br from-orange/10 to-yellow-50 border-2 border-orange/20 rounded-xl p-6 mb-6 shadow-lg">
+      <div className="py-8">
         <div className="text-center mb-4">
           <h3 className="text-3xl font-fredoka text-orange mb-2">
             Chat Live with Toby the Story Dog!
@@ -107,9 +114,9 @@ export default function AboutToby() {
         </div>
 
         <div className="bg-white rounded-lg p-4 shadow-sm">
-          <h4 className="font-fredoka text-orange mb-3 text-lg">
+          <strong className="text-orange block mb-1">
             💡 Fun Things to Ask Toby:
-          </h4>
+          </strong>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
               &quot;Poem about your adventures!&quot;
@@ -139,22 +146,6 @@ export default function AboutToby() {
               &quot;Toll bridge crossing!&quot;
             </div>
           </div>
-        </div>
-
-        <div className="mt-4 text-center">
-          <div className="border border-orange/30 rounded-lg py-2 px-4 bg-orange/5">
-            {" "}
-            {/* 🆕 BORDER ADDED */}
-            <p className="text-sm text-gray-600">
-              <strong>🌟 Pro Tip:</strong> Start with &quot;I&apos;m
-              [Name]&quot; for personalized stories!
-            </p>
-          </div>
-          <p className="text-sm text-gray-600 mt-2">
-            <strong>📚 Did You Know?</strong> Toby The Story Dog is based on a
-            real rescue Chihuahua mix named Toby! His stories come from actual
-            adventures.
-          </p>
         </div>
       </div>
     </section>

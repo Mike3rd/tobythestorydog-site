@@ -235,7 +235,10 @@ export default function TobyChat({
           Chat with Toby the Story Dog
         </h2>
       </div>
-
+      <p className="text-sm text-gray-600 pb-3">
+        <strong>🌟 Pro Tip:</strong> Start with &quot;I&apos;m [Name]&quot; for
+        personalized stories!
+      </p>
       {/* Chat box */}
       <div
         ref={chatBoxRef}

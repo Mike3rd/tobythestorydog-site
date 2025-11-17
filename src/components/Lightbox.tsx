@@ -32,7 +32,7 @@ export default function Lightbox({
       {/* Trigger button */}
       <button
         onClick={handleOpen} // ✅ only one onClick
-        className="px-6 py-3 border-2 border-buttons text-buttons rounded-full font-fredoka text-lg sm:text-xl hover:bg-buttons hover:text-white transition"
+        className="px-6 py-3 border-2 border-buttons text-buttons rounded-full font-fredoka text-lg sm:text-xl hover:bg-buttons hover:text-text_hero_subtitle transition"
         aria-label="Open lightbox"
       >
         {triggerLabel || "View Sample Page"}
