@@ -119,11 +119,11 @@ export default function SubmitDogForm({ onSuccess }: SubmitDogFormProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium">Message</label>
+        <label className="block text-sm font-medium">Message (optional)</label>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Why does your dog love the book?"
+          placeholder="Message for Toby"
           className="w-full border rounded px-3 py-2 h-24"
         />
       </div>
