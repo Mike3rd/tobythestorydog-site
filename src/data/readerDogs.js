@@ -8,7 +8,7 @@ export const readerDogs = [
   {
     image: "/submit-dog/griffin.webp",
     name: "Griffin",
-    breed: " ", 
+    breed: "Miniture Cockapo", 
     note: "",
   },
     {
