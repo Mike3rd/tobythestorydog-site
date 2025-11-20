@@ -26,6 +26,11 @@ export default async function StoryPage({ params }: Props) {
     .eq("published", true)
     .single();
 
+  // Add these logs
+  console.log("Slug param:", slug);
+  console.log("Story fetched:", story);
+  console.log("Supabase error:", error);
+
   if (error || !story) {
     return notFound(); // 404 if not found
   }
