@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function AboutToby() {
   return (
-    <section className="max-w-3xl mx-auto text-center py-4 px-4">
-      <h2 className="text-3xl font-fredoka text-orange mb-8">
+    <section className="max-w-3xl mx-auto text-center py-12 px-4">
+      <h2 className="text-3xl font-fredoka text-text_hero_title mb-8">
         Meet Toby the Story Dog!
       </h2>
 
@@ -69,84 +69,6 @@ export default function AboutToby() {
           <strong>📚 Did You Know?</strong> Toby The Story Dog is based on a
           real rescue Chihuahua mix named Toby!
         </p>
-      </div>
-
-      {/* 🆕 ENHANCED CHAT CALLOUT (CLEANER DESIGN) */}
-      <div className="py-8">
-        <div className="text-center mb-4">
-          <h3 className="text-3xl font-fredoka text-orange mb-2">
-            Chat Live with Toby the Story Dog!
-          </h3>
-          <p className="text-gray-700 text-lg">
-            The internet&apos;s most charming Chihuahua mix is waiting to share
-            adventures with you!
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-            <span className="text-2xl block mb-2">📖</span>
-            <strong className="text-orange block mb-1">
-              Personalized Stories
-            </strong>
-            <p className="text-sm text-gray-600">
-              Tell Toby your name and ask about his wild adventures!
-            </p>
-          </div>
-
-          <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-            <span className="text-2xl block mb-2">🦴</span>
-            <strong className="text-orange block mb-1">Pack Life</strong>
-            <p className="text-sm text-gray-600">
-              Learn about the real Toby&apos;s pack and daily routines
-            </p>
-          </div>
-
-          <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-            <span className="text-2xl block mb-2">🎭</span>
-            <strong className="text-orange block mb-1">
-              Meet the Characters
-            </strong>
-            <p className="text-sm text-gray-600">
-              Hear about Cheezy Crow, Finley Cat, and more!
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg p-4 shadow-sm">
-          <strong className="text-orange block mb-1">
-            💡 Fun Things to Ask Toby:
-          </strong>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Poem about your adventures!&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Tell me about Cheezy Crow!&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;What&apos;s your favorite treat?&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Street life story!&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Tell me about Finley Cat!&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;What&apos;s the real Toby&apos;s daily routine?&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Tell me about the REAL Toby!&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Beach adventure story!&quot;
-            </div>
-            <div className="bg-orange/10 py-2 px-3 rounded-lg text-sm">
-              &quot;Toll bridge crossing!&quot;
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

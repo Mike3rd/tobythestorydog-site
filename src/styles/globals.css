@@ -38,4 +38,10 @@
   button {
     font-family: 'Fredoka One', cursive;
   }
+
+.whitespace-pre-line p + p {
+  margin-top: 2rem; /* or whatever spacing you like */
+}
+
+
 }

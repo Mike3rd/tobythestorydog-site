@@ -8,7 +8,7 @@ export default function FeaturedReaderDogs() {
 
   return (
     <section className="w-full py-20 bg-background px-6 flex flex-col items-center text-center">
-      <h2 className="text-3xl font-fredoka text-orange mb-4">
+      <h2 className="text-3xl font-fredoka text-text_hero_title mb-4">
         Tail Waggers Club
       </h2>
 
