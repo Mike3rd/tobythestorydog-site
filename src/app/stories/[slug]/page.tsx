@@ -55,15 +55,15 @@ export default async function StoryPage(props: StoryPageProps) {
         {/* Left: Story content */}
         <div className="flex-1">
           {/* Row 1: Image + Title/Date/Excerpt */}
-          <div className="flex flex-col md:flex-row gap-6 mb-8 items-start">
+          <div className="flex flex-col md:flex-row gap-6 mb-8 pb-4 border-b border-gray-200 items-start">
             {imageUrl && (
-              <div className="relative w-48 h-48 md:w-48 md:h-48 rounded-xl overflow-hidden flex-shrink-0 mx-auto md:mx-0">
+              <div className="relative w-full h-64 md:w-48 md:h-48 rounded-xl overflow-hidden flex-shrink-0 mx-auto md:mx-0">
                 <Image
                   src={imageUrl}
                   alt={story.title}
-                  width={192}
-                  height={192}
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 192px"
                 />
               </div>
             )}
@@ -80,7 +80,7 @@ export default async function StoryPage(props: StoryPageProps) {
               {story.excerpt && (
                 <div className="text-gray-700 italic whitespace-pre-line">
                   {story.excerpt.split("\n\n").map((paragraph, index) => (
-                    <p key={index} className="mb-4">
+                    <p key={index} className="mb-4 leading-6">
                       {paragraph}
                     </p>
                   ))}
@@ -92,7 +92,7 @@ export default async function StoryPage(props: StoryPageProps) {
           {/* Row 2: Full story content */}
           <div className="text-gray-800 whitespace-pre-line">
             {story.content.split("\n\n").map((paragraph, index) => (
-              <p key={index} className="mb-6">
+              <p key={index} className="mb-8 leading-6">
                 {paragraph}
               </p>
             ))}

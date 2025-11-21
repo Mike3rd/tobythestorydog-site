@@ -40,7 +40,7 @@
   }
 
 .whitespace-pre-line p + p {
-  margin-top: 2rem; /* or whatever spacing you like */
+  margin-top: 1rem; /* or whatever spacing you like */
 }
 
 
