@@ -37,7 +37,7 @@ export default async function FeaturedStoryHome() {
 
       <div className="bg-white rounded-2xl shadow-md p-4 pb-6 hover:shadow-lg transition flex flex-col md:flex-row gap-6">
         {imageUrl && (
-          <div className="relative w-full md:w-1/3 h-64 rounded-xl overflow-hidden">
+          <div className="relative w-full h-72 md:w-1/3 md:h-auto rounded-xl overflow-hidden">
             <Image
               src={imageUrl}
               alt={story.title}
