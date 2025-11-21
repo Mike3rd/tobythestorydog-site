@@ -57,7 +57,20 @@ export default async function StoryPage(props: StoryPageProps) {
           {/* Row 1: Image + Title/Date/Excerpt */}
           <div className="flex flex-col md:flex-row gap-6 mb-8 pb-4 border-b border-gray-200 items-start">
             {imageUrl && (
-              <div className="relative w-full h-64 md:w-48 md:h-48 rounded-xl overflow-hidden flex-shrink-0 mx-auto md:mx-0">
+              <div
+                className="
+    relative
+    w-full
+    h-[100vw]        /* mobile: full-width and full-height square */
+    md:w-48
+    md:h-48          /* desktop: fixed square */
+    rounded-xl
+    overflow-hidden
+    flex-shrink-0
+    mx-auto
+    md:mx-0
+  "
+              >
                 <Image
                   src={imageUrl}
                   alt={story.title}

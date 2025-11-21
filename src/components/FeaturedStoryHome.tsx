@@ -30,14 +30,24 @@ export default async function FeaturedStoryHome() {
     : null;
 
   return (
-    <section className="max-w-5xl mx-auto my-12 px-4">
+    <section className="max-w-3xl mx-auto my-12 px-4">
       <h2 className="text-3xl font-fredoka text-text_hero_title mb-6 text-center">
         Featured Toby Tale
       </h2>
 
       <div className="bg-white rounded-2xl shadow-md p-4 pb-6 hover:shadow-lg transition flex flex-col md:flex-row gap-6">
         {imageUrl && (
-          <div className="relative w-full h-72 md:w-1/3 md:h-auto rounded-xl overflow-hidden">
+          <div
+            className="
+    relative
+    w-full           /* mobile: full width */
+    aspect-square    /* mobile: square */
+    md:w-48          /* desktop: fixed width */
+    md:aspect-square /* desktop: also square */
+    rounded-xl
+    overflow-hidden
+  "
+          >
             <Image
               src={imageUrl}
               alt={story.title}
