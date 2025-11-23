@@ -39,20 +39,23 @@ export default async function FeaturedStoryHome() {
         {imageUrl && (
           <div
             className="
-    relative
-    w-full           /* mobile: full width */
-    aspect-square    /* mobile: square */
-    md:w-48          /* desktop: fixed width */
-    md:aspect-square /* desktop: also square */
-    rounded-xl
-    overflow-hidden
-  "
+          relative
+          w-full           /* mobile: full width */
+          aspect-square    /* mobile: square */
+          md:w-48          /* desktop: fixed width */
+          md:h-48          /* desktop: fixed height to match */
+          rounded-xl
+          overflow-hidden
+          flex-shrink-0    /* extra protection against shrinking */
+        "
           >
             <Image
               src={imageUrl}
               alt={story.title}
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 192px"
+              priority
             />
           </div>
         )}

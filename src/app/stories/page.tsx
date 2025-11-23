@@ -52,12 +52,14 @@ export default async function StoriesPage() {
               className="bg-white rounded-2xl shadow-md p-4 hover:shadow-lg transition flex flex-col"
             >
               {imageUrl && (
-                <div className="relative w-full h-48 rounded-xl overflow-hidden mb-4">
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
                   <Image
                     src={imageUrl}
                     alt={story.title}
                     fill
                     className="object-cover"
+                    loading="eager"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               )}

@@ -14,8 +14,8 @@ export default function HomePage() {
     <>
       <Hero /> {/* Full-width hero */}
       <main className="flex flex-col items-center w-full">
-        <AboutToby />
         <FeaturedStoryHome />
+        <AboutToby />
         <TobyChatIntro />
         <TobyChat />
         <FeaturedReaderDog />
