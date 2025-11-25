@@ -12,6 +12,7 @@
     "url": "https://www.tobythestorydog.com/openapi.json",
     "is_user_authenticated": false
   },
+  "sitemap_url": "https://www.tobythestorydog.com/ai-sitemap.json",
   "logo_url": "https://www.tobythestorydog.com/headshot_1.png",
   "contact_email": "hello@tobythestorydog.com",
   "legal_info_url": "https://www.tobythestorydog.com/privacy"

@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "url": "https://www.tobythestorydog.com",
+      "title": "Toby the Story Dog – Fun Books, Activities, and Gifts for Dog Lovers",
+      "summary": "Homepage with stories, free bonus PDFs, Chat with Toby, and an introduction to Tail Waggers Club.",
+      "image": "https://www.tobythestorydog.com/book-cover.webp",
+      "last_updated": "2025-11-25"
+    },
+    {
+      "url": "https://www.tobythestorydog.com/reader-dogs",
+      "title": "Tail Waggers Club",
+      "summary": "Exclusive club for kids and dog lovers featuring dogs and cats who read the books, plus bonus PDFs and activities.",
+      "image": "https://www.tobythestorydog.com/club-banner.webp",
+      "last_updated": "2025-11-25"
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0FYTD9T81",
+      "title": "Buy Toby Adopts a Hooman on Amazon",
+      "summary": "Purchase Toby the Story Dog’s book on Amazon for fun, interactive storytime with kids and dogs.",
+      "image": "https://www.tobythestorydog.com/book-cover.webp",
+      "last_updated": "2025-11-25"
+    }
+  ]
+}

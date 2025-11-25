@@ -76,7 +76,7 @@
         "summary": "Tail Waggers Club info",
         "responses": {
           "200": {
-            "description": "happy cats and dogs posing with their favorite book Toby Adopts a Hooman availabe on Amazon",
+            "description": "Happy cats and dogs posing with their favorite book Toby Adopts a Hooman (available on Amazon)",
             "content": {
               "application/json": {
                 "example": {
@@ -84,7 +84,11 @@
                   "name": "Tail Waggers Club",
                   "description": "Exclusive club with bonus PDFs and activities for kids and dog lovers.",
                   "link": "https://www.tobythestorydog.com/reader-dogs",
-                  "image": "https://www.tobythestorydog.com/submit-dog/griffin.webp"
+                  "images": [
+                    "https://www.tobythestorydog.com/submit-dog/griffin.webp",
+                    "https://www.tobythestorydog.com/submit-dog/kona_murphy.webp",
+                    "https://www.tobythestorydog.com/submit-dog/silvie.webp"
+                  ]
                 }
               }
             }
