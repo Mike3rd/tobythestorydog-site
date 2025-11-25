@@ -1,6 +1,5 @@
 export const revalidate = 300; // 5 minutes
 
-// src/app/stories/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { createClient } from "@supabase/supabase-js";
@@ -41,8 +40,49 @@ export default async function StoriesPage() {
         </Link>
       </div>
 
-      {/* Stories Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Mobile List (better UX, saves space) */}
+      <div className="md:hidden flex flex-col gap-6">
+        {stories.map((story) => {
+          const imageUrl = story.featured_image
+            ? getStoryImageUrl(story.featured_image)
+            : undefined;
+
+          return (
+            <Link
+              key={story.id}
+              href={`/stories/${story.slug}`}
+              className="flex items-start gap-4 bg-white p-4 rounded-2xl shadow-md hover:shadow-lg transition"
+            >
+              {imageUrl && (
+                <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
+                  <Image
+                    src={imageUrl}
+                    alt={story.title}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </div>
+              )}
+
+              <div className="flex-1">
+                <h3 className="text-lg font-fredoka text-orange leading-tight mb-1">
+                  {story.title}
+                </h3>
+
+                {story.excerpt && (
+                  <p className="text-gray-700 text-sm line-clamp-2">
+                    {story.excerpt}
+                  </p>
+                )}
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Desktop Grid */}
+      <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {stories.map((story) => {
           const imageUrl = story.featured_image
             ? getStoryImageUrl(story.featured_image)
@@ -60,8 +100,7 @@ export default async function StoriesPage() {
                     alt={story.title}
                     fill
                     className="object-cover"
-                    loading="eager"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               )}
