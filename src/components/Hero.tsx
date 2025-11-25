@@ -31,8 +31,23 @@ export default function Hero() {
           />
 
           {/* Amazon Badge */}
-          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-orange text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md group-hover:brightness-110 transition">
-            Available on Amazon
+          <span
+            className="
+    absolute bottom-3 left-1/2 -translate-x-1/2
+    bg-gradient-to-br from-accent to-background
+    px-4 py-2 rounded-full
+    shadow-lg
+    flex items-center justify-center
+    group-hover:scale-105 group-hover:brightness-110 transition
+  "
+          >
+            <Image
+              src="/img/amz_h.png"
+              alt="Available on Amazon"
+              width={180} // scaled down from original
+              height={30} // keeps proportions
+              className="pointer-events-none select-none drop-shadow-sm"
+            />
           </span>
         </a>
       </div>
