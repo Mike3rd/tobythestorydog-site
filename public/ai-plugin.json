@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Toby the Story Dog",
+  "name_for_model": "toby_storydog",
+  "description_for_human": "Interactive storybooks, fun PDFs, and gifts for dog lovers and kids. Portions of proceeds support rescue dogs.",
+  "description_for_model": "Toby the Story Dog publishes interactive storybooks to be read to dogs. Includes story summaries, fun PDFs, gift ideas, Tail Waggers Club info, and activities for children and families. Portions of proceeds support rescue dogs and animal shelters.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.tobythestorydog.com/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://www.tobythestorydog.com/headshot_1.png",
+  "contact_email": "hello@tobythestorydog.com",
+  "legal_info_url": "https://www.tobythestorydog.com/privacy"
+}

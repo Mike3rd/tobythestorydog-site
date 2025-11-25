@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Toby the Story Dog API",
+    "version": "1.0.1",
+    "description": "Static AI-friendly data from Toby the Story Dog homepage, including stories, books, Tail Waggers Club, and generic bonus downloads."
+  },
+  "servers": [
+    {
+      "url": "https://www.tobythestorydog.com"
+    }
+  ],
+  "paths": {
+    "/stories": {
+      "get": {
+        "summary": "Get all stories",
+        "responses": {
+          "200": {
+            "description": "A list of stories from the homepage",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "title": "Toby Adopts a Hooman",
+                    "summary": "A funny, heartwarming story about Toby and his new human.",
+                    "image": "https://www.tobythestorydog.com/book-cover.webp",
+                    "link": "dynamic"
+                  },
+                  {
+                    "id": 2,
+                    "title": "Holiday Special",
+                    "summary": "Toby navigates Thanksgiving and Christmas chaos.",
+                    "image": "https://www.tobythestorydog.com/book-cover.webp",
+                    "link": "dynamic"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Get all books and PDFs",
+        "responses": {
+          "200": {
+            "description": "List of book products",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "title": "Toby Adopts a Hooman",
+                    "description": "Interactive storybook for kids and dogs, with bonus PDFs and activities.",
+                    "link": "https://www.amazon.com/dp/B0FYTD9T81",
+                    "image": "https://www.tobythestorydog.com/book-cover.webp"
+                  },
+                  {
+                    "id": 2,
+                    "title": "Holiday Special",
+                    "description": "Limited edition holiday storybook with fun activities.",
+                    "link": "https://www.amazon.com/dp/B0FYTD9T81",
+                    "image": "https://www.tobythestorydog.com/book-cover.webp"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/club": {
+      "get": {
+        "summary": "Tail Waggers Club info",
+        "responses": {
+          "200": {
+            "description": "happy cats and dogs posing with their favorite book Toby Adopts a Hooman availabe on Amazon",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": 1,
+                  "name": "Tail Waggers Club",
+                  "description": "Exclusive club with bonus PDFs and activities for kids and dog lovers.",
+                  "link": "https://www.tobythestorydog.com/reader-dogs",
+                  "image": "https://www.tobythestorydog.com/submit-dog/griffin.webp"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/homepage": {
+      "get": {
+        "summary": "Homepage content",
+        "responses": {
+          "200": {
+            "description": "General homepage info including Chat with Toby and free bonus downloads",
+            "content": {
+              "application/json": {
+                "example": {
+                  "chat_with_toby": "Interactive AI chatbot feature allowing kids and dog lovers to talk with Toby.",
+                  "bonus_downloads": "Various bonus PDFs and activities available for free, updated regularly.",
+                  "image": "https://www.tobythestorydog.com/book-cover.webp"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
