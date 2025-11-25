@@ -3,6 +3,7 @@ import Script from "next/script";
 import "@/styles/globals.css";
 import { fredoka, nunito, barriecito, rubik, luckiestguy } from "@/lib/fonts";
 import ClientPostHogProvider from "@/components/ClientPostHogProvider"; // new file
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Toby the Story Dog – Pet Gifts, Fun PDFs & Adventures",
@@ -73,7 +74,7 @@ export default function RootLayout({
       <body className="bg-cream text-gray-800 font-nunito">
         <ClientPostHogProvider />
         {children}
-
+        <Footer />
         {/* JSON-LD FAQ Structured Data for AI & Rich Results */}
         <Script
           type="application/ld+json"

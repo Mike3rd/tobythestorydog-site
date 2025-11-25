@@ -1,0 +1,24 @@
+{
+  "brand": "Toby the Story Dog",
+  "mission": "We create beautifully illustrated books for kids and adults, designed to be read to dogs, with a portion of proceeds supporting rescue dogs and animal shelters.",
+  "products": ["Toby Adopts a Hooman", "Holiday Specials", "Bedtime Stories"],
+  "audience": [
+    "Kids",
+    "Adults",
+    "Dog lovers",
+    "Gift shoppers",
+    "Pet owners",
+    "Rescue dog owners",
+    "Mixed breed dog owners"
+  ],
+  "unique_features": [
+    "Read-to-dog concept",
+    "Educational content",
+    "Fun illustrations",
+    "Interactive image searches for kids",
+    "Clever Easter eggs for adults",
+    "Live Chat with Toby the Story Dog",
+    "Fun short stories posted frequently by Toby"
+  ],
+  "promotions": ["Holiday gifts", "Limited edition books", "Seasonal pricing"]
+}

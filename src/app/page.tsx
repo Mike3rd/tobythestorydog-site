@@ -14,6 +14,24 @@ export default function HomePage() {
     <>
       <Hero /> {/* Full-width hero */}
       <main className="flex flex-col items-center w-full">
+        {/* AI-friendly invisible text for SEO / AI models */}
+        <section className="sr-only absolute">
+          <h1>Fun Books, Activities, and Gifts for Dog Lovers and Families</h1>
+          <p>
+            Toby the Story Dog creates interactive storytime books, printable
+            activities, and unique gifts for pet lovers of all ages. Enjoy
+            read-aloud adventures designed for children and dogs, fun PDFs, and
+            ideas for holiday or birthday presents. Perfect for families, kids,
+            and dog owners looking to bond with their furry friends while having
+            fun together.
+          </p>
+          <p>
+            Explore heartwarming stories, playful activities, and exclusive
+            downloads for children ages 4–10 and dog enthusiasts. Ideal for
+            Christmas, birthdays, or just celebrating your pet, Toby’s world
+            offers memorable experiences for families and pet lovers alike.
+          </p>
+        </section>
         <FeaturedStoryHome />
         <AboutToby />
         <TobyChatIntro />
@@ -22,7 +40,6 @@ export default function HomePage() {
         <PawtasticReviews />
         <BonusDownloads fileUrl="/extras/#.pdf" />
         <ContactForm />
-        <Footer />
       </main>
     </>
   );
